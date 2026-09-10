@@ -1,0 +1,217 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-08-14T01:09:56.817+06:30  INFO 31384 --- [           main] com.unicconnect.UniConnectApplication    : Starting UniConnectApplication v0.0.1-SNAPSHOT using Java 21.0.11 with PID 31384 (D:\UniConnect\UniConnectServer\target\unicconnect-api-0.0.1-SNAPSHOT.jar started by Khaing Zin Phyo in D:\UniConnect\UniConnectServer)
+2026-08-14T01:09:56.819+06:30 DEBUG 31384 --- [           main] com.unicconnect.UniConnectApplication    : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-08-14T01:09:56.819+06:30  INFO 31384 --- [           main] com.unicconnect.UniConnectApplication    : The following 1 profile is active: "dev"
+2026-08-14T01:09:58.516+06:30  INFO 31384 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-14T01:09:58.685+06:30  INFO 31384 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 161 ms. Found 23 JPA repository interfaces.
+2026-08-14T01:09:59.844+06:30  INFO 31384 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-14T01:09:59.876+06:30  INFO 31384 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-14T01:09:59.876+06:30  INFO 31384 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-08-14T01:09:59.946+06:30  INFO 31384 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-14T01:09:59.946+06:30  INFO 31384 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3012 ms
+2026-08-14T01:10:00.066+06:30 DEBUG 31384 --- [           main] c.u.security.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2026-08-14T01:10:00.310+06:30  INFO 31384 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-14T01:10:00.453+06:30  INFO 31384 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-08-14T01:10:00.534+06:30  INFO 31384 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-14T01:10:01.022+06:30  INFO 31384 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-14T01:10:01.081+06:30  INFO 31384 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-14T01:10:05.142+06:30  INFO 31384 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a42019a
+2026-08-14T01:10:05.157+06:30  INFO 31384 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-14T01:10:08.522+06:30  INFO 31384 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-14T01:10:10.430+06:30  INFO 31384 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-14T01:10:10.916+06:30  INFO 31384 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-14T01:10:12.617+06:30  INFO 31384 --- [           main] com.unicconnect.service.StorageService   : StorageService active mode: local
+2026-08-14T01:10:13.271+06:30  INFO 31384 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3718f26a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24d84d1e, org.springframework.security.web.context.SecurityContextHolderFilter@4a57cec1, org.springframework.security.web.header.HeaderWriterFilter@d6b8c43, org.springframework.web.filter.CorsFilter@30428572, org.springframework.security.web.authentication.logout.LogoutFilter@939f06, com.unicconnect.security.JwtAuthenticationFilter@22825e1e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c40aed1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@bca34d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f12af2f, org.springframework.security.web.session.SessionManagementFilter@3cab5869, org.springframework.security.web.access.ExceptionTranslationFilter@6593f4fd, org.springframework.security.web.access.intercept.AuthorizationFilter@334412ed]
+2026-08-14T01:10:13.595+06:30  INFO 31384 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-08-14T01:10:13.601+06:30  INFO 31384 --- [           main] com.unicconnect.UniConnectApplication    : Started UniConnectApplication in 17.652 seconds (process running for 18.401)
+2026-08-14T01:10:13.955+06:30  INFO 31384 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-14T01:10:13.955+06:30  INFO 31384 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-14T01:10:13.955+06:30  INFO 31384 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-08-14T01:10:13.976+06:30 DEBUG 31384 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/health
+2026-08-14T01:10:13.992+06:30 DEBUG 31384 --- [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:10:13.992+06:30 DEBUG 31384 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/health
+2026-08-14T01:10:15.021+06:30  INFO 31384 --- [           main] com.unicconnect.config.DataInitializer   : Roles seeded successfully
+2026-08-14T01:10:15.323+06:30  INFO 31384 --- [           main] c.unicconnect.config.DevDataInitializer  : === Dev profile active: seeding development data ===
+2026-08-14T01:10:18.488+06:30  INFO 31384 --- [           main] c.unicconnect.config.DevDataInitializer  : Organizational units seeded
+2026-08-14T01:10:19.110+06:30  INFO 31384 --- [           main] c.unicconnect.config.DevDataInitializer  : Semesters seeded (1-8)
+2026-08-14T01:10:20.916+06:30  INFO 31384 --- [           main] c.unicconnect.config.DevDataInitializer  : Sections seeded (A, B, C)
+2026-08-14T01:10:23.298+06:30  INFO 31384 --- [           main] c.unicconnect.config.DevDataInitializer  : Majors seeded (CS, CT, CST)
+2026-08-14T01:10:23.585+06:30  INFO 31384 --- [           main] c.unicconnect.config.DevDataInitializer  : Active academic term already exists
+2026-08-14T01:10:25.986+06:30  INFO 31384 --- [           main] c.unicconnect.config.DevDataInitializer  : Positions seeded
+2026-08-14T01:10:26.290+06:30  INFO 31384 --- [           main] c.unicconnect.config.DevDataInitializer  : System admin already exists: nyiminyan0099@gmail.com
+2026-08-14T01:10:51.896+06:30  INFO 31384 --- [           main] c.unicconnect.config.DevDataInitializer  : Staff seeded (30 total: 20 lecturers, 3 student affairs, 3 finance, 3 administration, 1 admin)
+2026-08-14T01:10:53.287+06:30  INFO 31384 --- [           main] c.unicconnect.config.DevDataInitializer  : Students already present (240), skipping student seed
+2026-08-14T01:10:53.287+06:30  INFO 31384 --- [           main] c.unicconnect.config.DevDataInitializer  : === Dev data seeding complete ===
+2026-08-14T01:19:08.378+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/sections
+2026-08-14T01:19:08.378+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/terms
+2026-08-14T01:19:08.401+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/schedules
+2026-08-14T01:19:08.401+06:30 DEBUG 31384 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/students
+2026-08-14T01:19:08.401+06:30 DEBUG 31384 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/terms?status=ACTIVE
+2026-08-14T01:19:08.614+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/students
+2026-08-14T01:19:08.615+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/terms?status=ACTIVE
+2026-08-14T01:19:08.616+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/schedules
+2026-08-14T01:19:09.560+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:09.560+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:09.560+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:09.560+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:09.560+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:09.576+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:09.576+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:09.576+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:09.576+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:09.576+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:09.602+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error?status=ACTIVE
+2026-08-14T01:19:09.602+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-08-14T01:19:09.602+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-08-14T01:19:09.602+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-08-14T01:19:09.602+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-08-14T01:19:09.602+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:09.602+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:09.602+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:09.602+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:09.602+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:09.602+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:09.602+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:09.608+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:09.608+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:09.608+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:11.947+06:30 DEBUG 31384 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/teaching-assignments
+2026-08-14T01:19:11.947+06:30 DEBUG 31384 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/courses
+2026-08-14T01:19:11.948+06:30 DEBUG 31384 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/staff
+2026-08-14T01:19:11.948+06:30 DEBUG 31384 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/organizational-units
+2026-08-14T01:19:11.961+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-08-14T01:19:11.966+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/courses
+2026-08-14T01:19:11.963+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/teaching-assignments
+2026-08-14T01:19:11.966+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:11.968+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/organizational-units
+2026-08-14T01:19:11.968+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:11.968+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:11.973+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:11.973+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:11.973+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-08-14T01:19:11.973+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:11.973+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:11.977+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-08-14T01:19:11.980+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:11.980+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:11.982+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:11.983+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-08-14T01:19:11.984+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:11.984+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-08-14T01:19:11.989+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:11.984+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:11.987+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:11.991+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:11.993+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-08-14T01:19:26.301+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-08-14T01:19:26.301+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-08-14T01:19:26.301+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:19:26.301+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-08-14T01:19:26.848+06:30  WARN 31384 --- [nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2a42019a (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-08-14T01:19:26.848+06:30  WARN 31384 --- [nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@44fd7fd7 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-08-14T01:19:26.863+06:30  WARN 31384 --- [nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1143c7bc (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-08-14T01:19:36.074+06:30 DEBUG 31384 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-08-14T01:19:36.076+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/courses
+2026-08-14T01:19:36.073+06:30 DEBUG 31384 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/organizational-units
+2026-08-14T01:19:36.076+06:30 DEBUG 31384 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/terms?status=ACTIVE
+2026-08-14T01:19:36.076+06:30 DEBUG 31384 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/teaching-assignments
+2026-08-14T01:19:36.095+06:30 DEBUG 31384 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-08-14T01:19:36.095+06:30 DEBUG 31384 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/teaching-assignments
+2026-08-14T01:19:36.095+06:30 DEBUG 31384 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/organizational-units
+2026-08-14T01:19:36.095+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/courses
+2026-08-14T01:19:36.095+06:30 DEBUG 31384 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/terms?status=ACTIVE
+2026-08-14T01:19:36.999+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/teaching-assignments?termId=6eea6860-074e-4e8a-973d-7a538325bef1
+2026-08-14T01:19:37.013+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/teaching-assignments?termId=6eea6860-074e-4e8a-973d-7a538325bef1
+2026-08-14T01:19:37.020+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/teaching-assignments?termId=6eea6860-074e-4e8a-973d-7a538325bef1
+2026-08-14T01:19:47.772+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/organizational-units
+2026-08-14T01:19:47.772+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-08-14T01:19:47.775+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/organizational-units
+2026-08-14T01:19:47.777+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-08-14T01:20:03.062+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/users
+2026-08-14T01:20:03.071+06:30 DEBUG 31384 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2026-08-14T01:20:03.075+06:30 DEBUG 31384 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users
+2026-08-14T01:20:06.841+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/organizational-units
+2026-08-14T01:20:06.841+06:30 DEBUG 31384 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-08-14T01:20:06.842+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/teaching-assignments?termId=6eea6860-074e-4e8a-973d-7a538325bef1
+2026-08-14T01:20:06.842+06:30 DEBUG 31384 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/courses
+2026-08-14T01:20:06.848+06:30 DEBUG 31384 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/courses
+2026-08-14T01:20:06.850+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/organizational-units
+2026-08-14T01:20:06.850+06:30 DEBUG 31384 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-08-14T01:20:06.850+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/teaching-assignments?termId=6eea6860-074e-4e8a-973d-7a538325bef1
+2026-08-14T01:20:12.129+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/organizational-units
+2026-08-14T01:20:12.133+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/organizational-units
+2026-08-14T01:23:45.707+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/organizational-units
+2026-08-14T01:23:45.707+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-08-14T01:23:45.708+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-08-14T01:23:45.708+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/organizational-units
+2026-08-14T01:33:06.705+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-08-14T01:33:06.782+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:33:06.799+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-08-14T01:33:09.279+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/users/role/STAFF
+2026-08-14T01:33:09.300+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/users/role/STAFF
+2026-08-14T01:33:12.530+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:12.536+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:14.075+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:14.075+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:15.360+06:30 DEBUG 31384 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:15.366+06:30 DEBUG 31384 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:16.748+06:30 DEBUG 31384 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:16.748+06:30 DEBUG 31384 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:18.037+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:18.037+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:19.277+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:19.277+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:20.921+06:30 DEBUG 31384 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:20.932+06:30 DEBUG 31384 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:22.193+06:30 DEBUG 31384 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:22.201+06:30 DEBUG 31384 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:23.684+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:23.692+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:25.430+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:25.435+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:26.723+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:26.723+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:27.998+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:27.998+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:29.246+06:30 DEBUG 31384 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:29.278+06:30 DEBUG 31384 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:30.508+06:30 DEBUG 31384 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:30.508+06:30 DEBUG 31384 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:31.718+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:31.718+06:30 DEBUG 31384 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:32.917+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:32.922+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:34.480+06:30 DEBUG 31384 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:34.496+06:30 DEBUG 31384 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:35.739+06:30 DEBUG 31384 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:35.745+06:30 DEBUG 31384 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:37.271+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:37.275+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:38.495+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:38.499+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:39.689+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:39.692+06:30 DEBUG 31384 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:40.923+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:40.935+06:30 DEBUG 31384 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:33:42.151+06:30 DEBUG 31384 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2026-08-14T01:33:42.167+06:30 DEBUG 31384 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2026-08-14T01:37:13.560+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-08-14T01:37:13.560+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:37:13.560+06:30 DEBUG 31384 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-08-14T01:37:15.346+06:30 DEBUG 31384 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-08-14T01:37:15.362+06:30 DEBUG 31384 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-08-14T01:37:21.984+06:30 DEBUG 31384 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/staff/lecturers?termId=6eea6860-074e-4e8a-973d-7a538325bef1
+2026-08-14T01:37:21.984+06:30 DEBUG 31384 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/staff/lecturers?termId=6eea6860-074e-4e8a-973d-7a538325bef1
+2026-08-14T01:37:25.075+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/teaching-assignments?termId=6eea6860-074e-4e8a-973d-7a538325bef1
+2026-08-14T01:37:25.081+06:30 DEBUG 31384 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/teaching-assignments?termId=6eea6860-074e-4e8a-973d-7a538325bef1
+2026-08-14T01:37:38.509+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-08-14T01:37:38.512+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-14T01:37:38.512+06:30 DEBUG 31384 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login

@@ -1,0 +1,766 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-09-04T21:55:13.141+06:30  INFO 21452 --- [           main] com.unicconnect.UniConnectApplication    : Starting UniConnectApplication using Java 21.0.11 with PID 21452 (D:\UniConnect\UniConnectServer-V2\UniConnectServer\target\classes started by Khaing Zin Phyo in D:\UniConnect\UniConnectServer-V2\UniConnectServer)
+2026-09-04T21:55:13.141+06:30 DEBUG 21452 --- [           main] com.unicconnect.UniConnectApplication    : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-09-04T21:55:13.141+06:30  INFO 21452 --- [           main] com.unicconnect.UniConnectApplication    : The following 1 profile is active: "dev"
+2026-09-04T21:55:14.790+06:30  INFO 21452 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-04T21:55:15.016+06:30  INFO 21452 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 210 ms. Found 27 JPA repository interfaces.
+2026-09-04T21:55:15.947+06:30  INFO 21452 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-04T21:55:15.966+06:30  INFO 21452 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-04T21:55:15.970+06:30  INFO 21452 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-09-04T21:55:16.057+06:30  INFO 21452 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-04T21:55:16.057+06:30  INFO 21452 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2841 ms
+2026-09-04T21:55:16.149+06:30 DEBUG 21452 --- [           main] c.u.security.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2026-09-04T21:55:16.327+06:30  INFO 21452 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-04T21:55:16.421+06:30  INFO 21452 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-09-04T21:55:16.490+06:30  INFO 21452 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-04T21:55:16.801+06:30  INFO 21452 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-04T21:55:16.847+06:30  INFO 21452 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-04T21:55:16.869+06:30  INFO 21452 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-04T21:55:19.001+06:30  WARN 21452 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-04T21:55:20.727+06:30  INFO 21452 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-04T21:55:22.471+06:30  INFO 21452 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-04T21:55:22.885+06:30  INFO 21452 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-04T21:55:24.581+06:30  INFO 21452 --- [           main] com.unicconnect.service.StorageService   : StorageService active mode: local
+2026-09-04T21:55:25.257+06:30  INFO 21452 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@193c3354, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4cf52777, org.springframework.security.web.context.SecurityContextHolderFilter@57cd757a, org.springframework.security.web.header.HeaderWriterFilter@2a718598, org.springframework.web.filter.CorsFilter@7cef2f2d, org.springframework.security.web.authentication.logout.LogoutFilter@2c73dfd0, com.unicconnect.security.JwtAuthenticationFilter@2b08772d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@147c3a88, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47c8ced, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@703b2538, org.springframework.security.web.session.SessionManagementFilter@5ac4f417, org.springframework.security.web.access.ExceptionTranslationFilter@23e58061, org.springframework.security.web.access.intercept.AuthorizationFilter@5680639f]
+2026-09-04T21:55:25.576+06:30  INFO 21452 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-09-04T21:55:25.599+06:30  INFO 21452 --- [           main] com.unicconnect.UniConnectApplication    : Started UniConnectApplication in 13.104 seconds (process running for 13.645)
+2026-09-04T21:55:26.055+06:30  INFO 21452 --- [           main] com.unicconnect.config.DataInitializer   : Roles seeded successfully
+2026-09-04T21:55:28.016+06:30  INFO 21452 --- [           main] com.unicconnect.config.DataInitializer   : Positions seeded successfully
+2026-09-04T21:55:28.096+06:30  INFO 21452 --- [           main] c.unicconnect.config.DevDataInitializer  : === Dev profile active: seeding development data ===
+2026-09-04T21:55:29.997+06:30  INFO 21452 --- [           main] c.unicconnect.config.DevDataInitializer  : Organizational units seeded
+2026-09-04T21:55:30.338+06:30  INFO 21452 --- [           main] c.unicconnect.config.DevDataInitializer  : Semesters seeded (1-8)
+2026-09-04T21:55:31.796+06:30  INFO 21452 --- [           main] c.unicconnect.config.DevDataInitializer  : Sections seeded (A, B, C, CT)
+2026-09-04T21:55:33.122+06:30  INFO 21452 --- [           main] c.unicconnect.config.DevDataInitializer  : Majors seeded (CS, CT, CST)
+2026-09-04T21:55:33.217+06:30  INFO 21452 --- [           main] c.unicconnect.config.DevDataInitializer  : Active academic term already exists
+2026-09-04T21:55:34.443+06:30  INFO 21452 --- [           main] c.unicconnect.config.DevDataInitializer  : Positions seeded
+2026-09-04T21:55:34.613+06:30  INFO 21452 --- [           main] c.unicconnect.config.DevDataInitializer  : System admin already exists: nyiminyan0099@gmail.com
+2026-09-04T21:55:50.061+06:30  INFO 21452 --- [           main] c.unicconnect.config.DevDataInitializer  : Staff seeded (30 total: 20 lecturers, 3 student affairs, 3 finance, 3 administration, 1 admin)
+2026-09-04T21:55:50.560+06:30  INFO 21452 --- [           main] c.unicconnect.config.DevDataInitializer  : Students already present (245), skipping student seed
+2026-09-04T21:55:50.580+06:30  INFO 21452 --- [           main] c.unicconnect.config.DevDataInitializer  : === Dev data seeding complete (attempt 1) ===
+2026-09-04T21:56:07.018+06:30  INFO 21452 --- [nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-04T21:56:07.019+06:30  INFO 21452 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-04T21:56:07.022+06:30  INFO 21452 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-04T21:56:07.046+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:56:07.046+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-09-04T21:56:07.046+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2026-09-04T21:56:07.046+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/students
+2026-09-04T21:56:07.249+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-04T21:56:07.249+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-04T21:56:07.249+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-04T21:56:07.249+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-04T21:56:07.269+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2026-09-04T21:56:07.269+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-04T21:56:07.269+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2026-09-04T21:56:09.926+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2026-09-04T21:56:09.926+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-09-04T21:56:09.926+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:56:09.926+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/students
+2026-09-04T21:56:09.933+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-09-04T21:56:09.933+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users
+2026-09-04T21:56:09.933+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:56:09.933+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/students
+2026-09-04T21:56:09.995+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:56:09.995+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:57:06.864+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:57:06.879+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:57:07.272+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:57:07.273+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:58:06.876+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2026-09-04T21:58:06.884+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users
+2026-09-04T21:58:06.937+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/students
+2026-09-04T21:58:06.937+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:58:06.937+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-09-04T21:58:06.941+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/students
+2026-09-04T21:58:06.941+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:58:06.941+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-09-04T21:58:07.195+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:58:07.195+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:59:06.924+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:59:06.935+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:59:07.155+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T21:59:07.159+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:00:06.920+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2026-09-04T22:00:06.920+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/users
+2026-09-04T22:00:06.938+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/students
+2026-09-04T22:00:06.938+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:00:06.938+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-09-04T22:00:06.943+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/students
+2026-09-04T22:00:06.943+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:00:06.947+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-09-04T22:00:07.274+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:00:07.274+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:01:06.862+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:01:06.862+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:01:07.222+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:01:07.222+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:06.916+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/students
+2026-09-04T22:02:06.916+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:06.925+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2026-09-04T22:02:06.925+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-09-04T22:02:06.929+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/students
+2026-09-04T22:02:06.929+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:06.932+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/users
+2026-09-04T22:02:06.932+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-09-04T22:02:07.269+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:07.269+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:31.688+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/timetable-lobbies
+2026-09-04T22:02:31.690+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/timetable-lobbies
+2026-09-04T22:02:31.719+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:31.719+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:32.318+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:02:32.320+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:02:33.659+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:33.662+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:35.193+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/students
+2026-09-04T22:02:35.193+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2026-09-04T22:02:35.197+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users
+2026-09-04T22:02:35.197+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/students
+2026-09-04T22:02:35.279+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-09-04T22:02:35.279+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/terms
+2026-09-04T22:02:35.279+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/staff/me
+2026-09-04T22:02:35.279+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/terms
+2026-09-04T22:02:35.279+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-09-04T22:02:35.279+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/staff/me
+2026-09-04T22:02:36.286+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/terms
+2026-09-04T22:02:36.299+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/terms
+2026-09-04T22:02:36.574+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/staff/me
+2026-09-04T22:02:36.583+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/staff/me
+2026-09-04T22:02:36.624+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/generations
+2026-09-04T22:02:36.624+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/timetable-lobbies
+2026-09-04T22:02:36.624+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/generations
+2026-09-04T22:02:36.624+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/timetable-lobbies
+2026-09-04T22:02:36.662+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/manage?termId=efc68a91-5818-41aa-b4fb-893e240ea0ed
+2026-09-04T22:02:36.666+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/manage?termId=efc68a91-5818-41aa-b4fb-893e240ea0ed
+2026-09-04T22:02:38.338+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/generations
+2026-09-04T22:02:38.343+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/generations
+2026-09-04T22:02:39.109+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847
+2026-09-04T22:02:39.109+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847
+2026-09-04T22:02:39.123+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/time-slots
+2026-09-04T22:02:39.123+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/manage?termId=efc68a91-5818-41aa-b4fb-893e240ea0ed
+2026-09-04T22:02:39.123+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/time-slots
+2026-09-04T22:02:39.123+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/manage?termId=efc68a91-5818-41aa-b4fb-893e240ea0ed
+2026-09-04T22:02:39.351+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/time-slots
+2026-09-04T22:02:39.352+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/time-slots
+2026-09-04T22:02:39.501+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847
+2026-09-04T22:02:39.501+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847
+2026-09-04T22:02:39.518+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/exam-types
+2026-09-04T22:02:39.518+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/exam-types
+2026-09-04T22:02:39.701+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/timetable-lobbies
+2026-09-04T22:02:39.701+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/timetable-lobbies
+2026-09-04T22:02:39.784+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/exam-types
+2026-09-04T22:02:39.784+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/exam-types
+2026-09-04T22:02:42.016+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/timetable-lobbies
+2026-09-04T22:02:42.018+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/timetable-lobbies
+2026-09-04T22:02:48.610+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/timetable-lobbies
+2026-09-04T22:02:48.610+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/timetable-lobbies
+2026-09-04T22:02:48.659+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/manage?termId=efc68a91-5818-41aa-b4fb-893e240ea0ed
+2026-09-04T22:02:48.659+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/scope?termId=efc68a91-5818-41aa-b4fb-893e240ea0ed&examTypeId=4f885c79-0eb3-a8b3-d35d-dee741a88907
+2026-09-04T22:02:48.659+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/schedules
+2026-09-04T22:02:48.659+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/manage?termId=efc68a91-5818-41aa-b4fb-893e240ea0ed
+2026-09-04T22:02:48.659+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/scope?termId=efc68a91-5818-41aa-b4fb-893e240ea0ed&examTypeId=4f885c79-0eb3-a8b3-d35d-dee741a88907
+2026-09-04T22:02:48.659+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/schedules
+2026-09-04T22:02:51.287+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:51.289+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:51.571+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:02:51.575+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:02:53.872+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/timetable-lobbies
+2026-09-04T22:02:53.872+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/timetable-lobbies
+2026-09-04T22:02:53.904+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/scope?termId=efc68a91-5818-41aa-b4fb-893e240ea0ed&examTypeId=4f885c79-0eb3-a8b3-d35d-dee741a88907
+2026-09-04T22:02:53.904+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/manage?termId=efc68a91-5818-41aa-b4fb-893e240ea0ed
+2026-09-04T22:02:53.920+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/manage?termId=efc68a91-5818-41aa-b4fb-893e240ea0ed
+2026-09-04T22:02:53.920+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/scope?termId=efc68a91-5818-41aa-b4fb-893e240ea0ed&examTypeId=4f885c79-0eb3-a8b3-d35d-dee741a88907
+2026-09-04T22:02:53.920+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/schedules
+2026-09-04T22:02:53.920+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/schedules
+2026-09-04T22:02:55.285+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:55.285+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:56.049+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:02:56.052+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:02:58.694+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/timetable-lobbies
+2026-09-04T22:02:58.694+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/timetable-lobbies
+2026-09-04T22:02:59.280+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:59.283+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:02:59.962+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:02:59.964+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:03.826+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:03.826+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:04.270+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:04.270+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:04.698+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/timetable-lobbies
+2026-09-04T22:03:04.701+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/timetable-lobbies
+2026-09-04T22:03:07.853+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:07.853+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:08.267+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:08.267+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:10.525+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/timetable-lobbies
+2026-09-04T22:03:10.525+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/timetable-lobbies
+2026-09-04T22:03:11.834+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:11.836+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:12.854+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:12.862+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:15.846+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:15.846+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:16.176+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:16.176+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:19.840+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:19.840+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:20.327+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:20.333+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:23.851+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:23.851+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:24.577+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:24.579+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:27.842+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:27.849+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:28.352+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:28.357+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:31.844+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:31.848+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:32.180+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:32.180+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:35.842+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:35.842+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:36.621+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:36.621+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:39.834+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:39.834+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:40.253+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:40.253+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:43.852+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:43.854+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:44.406+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:44.419+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:47.829+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:47.829+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:48.225+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:48.228+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:50.847+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2026-09-04T22:03:50.851+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users
+2026-09-04T22:03:50.863+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/students
+2026-09-04T22:03:50.863+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/students
+2026-09-04T22:03:50.895+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-09-04T22:03:50.895+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-09-04T22:03:51.830+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:51.830+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:52.373+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:52.373+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:55.839+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:55.841+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:56.042+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:56.044+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:03:59.848+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:03:59.848+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:04:00.401+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:04:00.401+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:04:06.853+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:04:06.858+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:04:07.073+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:04:07.087+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock/heartbeat
+2026-09-04T22:05:06.999+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:05:07.001+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/students
+2026-09-04T22:05:07.001+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2026-09-04T22:05:07.001+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-09-04T22:05:07.006+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:05:07.006+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/students
+2026-09-04T22:05:07.006+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/users
+2026-09-04T22:05:07.006+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-09-04T22:05:07.222+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:05:07.222+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:05:15.904+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-09-04T22:05:15.904+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-04T22:05:15.904+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2026-09-04T22:06:06.952+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:06:06.952+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:06:07.159+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:06:07.167+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:06:24.685+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/terms
+2026-09-04T22:06:24.685+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/terms
+2026-09-04T22:06:50.195+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/manage
+2026-09-04T22:06:50.195+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/manage
+2026-09-04T22:07:06.871+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:07:06.909+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:07:07.002+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-09-04T22:07:07.002+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2026-09-04T22:07:07.002+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/students
+2026-09-04T22:07:07.020+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/users
+2026-09-04T22:07:07.020+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-09-04T22:07:07.020+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/students
+2026-09-04T22:07:07.223+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:07:07.223+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:07:28.724+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/generations
+2026-09-04T22:07:28.724+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/generations
+2026-09-04T22:07:39.910+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51/snapshot/prepare
+2026-09-04T22:07:40.002+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51/snapshot/prepare
+2026-09-04T22:07:40.686+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.TimetableGenerationService   : [SNAPSHOT] WORKSPACE_ENTER generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 workspaceId=efc68a91-5818-41aa-b4fb-893e240ea0ed
+2026-09-04T22:07:40.859+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           : [SNAPSHOT] LOOKUP generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 found=false status=null
+2026-09-04T22:07:40.859+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.TimetableGenerationService   : [SNAPSHOT] REBUILD generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 reason=missing_after_restart
+2026-09-04T22:07:40.886+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           : [SNAPSHOT] CREATE generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45 termId=efc68a91-5818-41aa-b4fb-893e240ea0ed examTypeId=null
+2026-09-04T22:07:40.886+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           : [SNAPSHOT] PREPARING generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45
+2026-09-04T22:07:46.947+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           : === PARTITION SUMMARY (generation=7f070f76-f1ce-459b-b16a-84b2066b6f51) ===
+2026-09-04T22:07:46.947+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           :   Sem-7: assignments=38, singletons=32, combineGroups=2, groupedAssignments=6, courseIds=14, requiredSections=ALL
+2026-09-04T22:07:46.947+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           :   Sem-1: assignments=27, singletons=21, combineGroups=3, groupedAssignments=6, courseIds=7, requiredSections=ALL
+2026-09-04T22:07:46.947+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           :   Sem-5: assignments=34, singletons=31, combineGroups=1, groupedAssignments=3, courseIds=12, requiredSections=ALL
+2026-09-04T22:07:46.947+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           :   Sem-8: assignments=0, singletons=0, combineGroups=0, groupedAssignments=0, courseIds=0, requiredSections=ALL
+2026-09-04T22:07:46.947+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           :   Sem-3: assignments=28, singletons=24, combineGroups=2, groupedAssignments=4, courseIds=7, requiredSections=ALL
+2026-09-04T22:07:46.947+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           :   Sem-4: assignments=28, singletons=22, combineGroups=2, groupedAssignments=6, courseIds=8, requiredSections=ALL
+2026-09-04T22:07:46.947+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           :   Sem-6: assignments=32, singletons=30, combineGroups=1, groupedAssignments=2, courseIds=12, requiredSections=ALL
+2026-09-04T22:07:46.947+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           :   Sem-2: assignments=27, singletons=21, combineGroups=3, groupedAssignments=6, courseIds=7, requiredSections=ALL
+2026-09-04T22:07:46.947+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           : === END PARTITION SUMMARY ===
+2026-09-04T22:07:46.947+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           : [SNAPSHOT] READY generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45 preloadTime=6061ms dbQueries=6 assignments=214 groupMembers=33 requirements=87 timeSlots=6 semesters=8
+2026-09-04T22:07:46.947+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.TimetableGenerationService   : [SNAPSHOT] READY generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45 semesters=8
+2026-09-04T22:07:47.014+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           : [SNAPSHOT] LOOKUP generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 found=true status=PRELOADED
+2026-09-04T22:07:58.017+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51/snapshot/prepare
+2026-09-04T22:07:58.017+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51/snapshot/prepare
+2026-09-04T22:07:58.207+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.TimetableGenerationService   : [SNAPSHOT] WORKSPACE_ENTER generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 workspaceId=efc68a91-5818-41aa-b4fb-893e240ea0ed
+2026-09-04T22:07:58.271+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.GenerationSnapshot           : [SNAPSHOT] LOOKUP generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 found=true status=PRELOADED
+2026-09-04T22:07:58.271+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.TimetableGenerationService   : [SNAPSHOT] REUSE generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45
+2026-09-04T22:07:59.475+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.GenerationSnapshot           : === PARTITION SUMMARY (generation=7f070f76-f1ce-459b-b16a-84b2066b6f51) ===
+2026-09-04T22:07:59.475+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.GenerationSnapshot           :   Sem-7: assignments=38, singletons=32, combineGroups=2, groupedAssignments=6, courseIds=14, requiredSections=ALL
+2026-09-04T22:07:59.477+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.GenerationSnapshot           :   Sem-1: assignments=27, singletons=21, combineGroups=3, groupedAssignments=6, courseIds=7, requiredSections=ALL
+2026-09-04T22:07:59.477+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.GenerationSnapshot           :   Sem-5: assignments=34, singletons=31, combineGroups=1, groupedAssignments=3, courseIds=12, requiredSections=ALL
+2026-09-04T22:07:59.477+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.GenerationSnapshot           :   Sem-8: assignments=0, singletons=0, combineGroups=0, groupedAssignments=0, courseIds=0, requiredSections=ALL
+2026-09-04T22:07:59.479+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.GenerationSnapshot           :   Sem-3: assignments=28, singletons=24, combineGroups=2, groupedAssignments=4, courseIds=7, requiredSections=ALL
+2026-09-04T22:07:59.479+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.GenerationSnapshot           :   Sem-4: assignments=28, singletons=22, combineGroups=2, groupedAssignments=6, courseIds=8, requiredSections=ALL
+2026-09-04T22:07:59.479+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.GenerationSnapshot           :   Sem-6: assignments=32, singletons=30, combineGroups=1, groupedAssignments=2, courseIds=12, requiredSections=ALL
+2026-09-04T22:07:59.479+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.GenerationSnapshot           :   Sem-2: assignments=27, singletons=21, combineGroups=3, groupedAssignments=6, courseIds=7, requiredSections=ALL
+2026-09-04T22:07:59.479+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.GenerationSnapshot           : === END PARTITION SUMMARY ===
+2026-09-04T22:07:59.479+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.GenerationSnapshot           : [SNAPSHOT] READY generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45 preloadTime=18593ms dbQueries=7 assignments=214 groupMembers=33 requirements=87 timeSlots=6 semesters=8
+2026-09-04T22:07:59.666+06:30  INFO 21452 --- [nio-8080-exec-9] c.u.service.GenerationSnapshot           : [SNAPSHOT] LOOKUP generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 found=true status=PRELOADED
+2026-09-04T22:07:59.860+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51/snapshot
+2026-09-04T22:07:59.860+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51/snapshot
+2026-09-04T22:08:00.245+06:30  INFO 21452 --- [nio-8080-exec-1] c.u.service.GenerationSnapshot           : [SNAPSHOT] LOOKUP generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 found=true status=PRELOADED
+2026-09-04T22:08:06.938+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:08:06.938+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:08:07.401+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:08:07.401+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:09:06.930+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:09:06.936+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:09:07.042+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2026-09-04T22:09:07.042+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-09-04T22:09:07.042+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/students
+2026-09-04T22:09:07.050+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users
+2026-09-04T22:09:07.050+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-09-04T22:09:07.054+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/students
+2026-09-04T22:09:07.410+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:09:07.410+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:09:21.447+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/scope?termId=efc68a91-5818-41aa-b4fb-893e240ea0ed
+2026-09-04T22:09:21.447+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/scope?termId=efc68a91-5818-41aa-b4fb-893e240ea0ed
+2026-09-04T22:09:48.446+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51/generate
+2026-09-04T22:09:48.446+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51/generate
+2026-09-04T22:09:56.688+06:30  INFO 21452 --- [nio-8080-exec-8] c.u.service.GenerationSnapshot           : [SNAPSHOT] LOOKUP generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 found=true status=PRELOADED
+2026-09-04T22:09:56.688+06:30  INFO 21452 --- [nio-8080-exec-8] c.u.service.TimetableGenerationService   : [SNAPSHOT] REUSE generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45
+2026-09-04T22:10:01.815+06:30  INFO 21452 --- [nio-8080-exec-8] c.u.service.GenerationSnapshot           : === PARTITION SUMMARY (generation=7f070f76-f1ce-459b-b16a-84b2066b6f51) ===
+2026-09-04T22:10:01.815+06:30  INFO 21452 --- [nio-8080-exec-8] c.u.service.GenerationSnapshot           :   Sem-2: assignments=21, singletons=15, combineGroups=3, groupedAssignments=6, courseIds=7, requiredSections=3
+2026-09-04T22:10:01.815+06:30  INFO 21452 --- [nio-8080-exec-8] c.u.service.GenerationSnapshot           : === END PARTITION SUMMARY ===
+2026-09-04T22:10:01.815+06:30  INFO 21452 --- [nio-8080-exec-8] c.u.service.GenerationSnapshot           : [SNAPSHOT] READY generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45 preloadTime=140929ms dbQueries=8 assignments=21 groupMembers=33 requirements=8 timeSlots=6 semesters=8
+2026-09-04T22:10:02.260+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.GenerationSnapshot           : [SNAPSHOT] LOOKUP generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 found=true status=PRELOADED
+2026-09-04T22:10:02.275+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.GenerationSnapshot           : [SNAPSHOT] GENERATING generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45
+2026-09-04T22:10:02.496+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : Generation 7f070f76-f1ce-459b-b16a-84b2066b6f51 scope (examType=null):
+2026-09-04T22:10:02.735+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-2: A,B,C
+2026-09-04T22:10:02.742+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : ========== GENERATION SCOPE DIAGNOSTIC ==========
+2026-09-04T22:10:02.742+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : Selected semesters:
+2026-09-04T22:10:02.742+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-2: A,B,C
+2026-09-04T22:10:02.742+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : AUTO-INCLUDED COMBINED GROUPS:
+2026-09-04T22:10:02.742+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-2 / CST-1241 / [A+B] (members=2)
+2026-09-04T22:10:02.742+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-2 / M-1201 / [A+B] (members=2)
+2026-09-04T22:10:02.742+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-2 / E-1201 / [A+B] (members=2)
+2026-09-04T22:10:02.742+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : IGNORED COMBINED GROUPS (semester or all member sections outside scope):
+2026-09-04T22:10:02.751+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-6 / CS-3241 / [A+B] reason=semester not selected
+2026-09-04T22:10:02.757+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-5 / CST-3141 / [A+B+CT] reason=semester not selected
+2026-09-04T22:10:02.757+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-4 / CST-2241 / [A+B+CT] reason=semester not selected
+2026-09-04T22:10:02.757+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-1 / CST-1141 / [A+B] reason=semester not selected
+2026-09-04T22:10:02.759+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-3 / CST-2141 / [A+B] reason=semester not selected
+2026-09-04T22:10:02.759+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-7 / CST-4141 / [A+B+CT] reason=semester not selected
+2026-09-04T22:10:02.759+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-4 / E-2201 / [A+B+CT] reason=semester not selected
+2026-09-04T22:10:02.759+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-1 / M-1101 / [A+B] reason=semester not selected
+2026-09-04T22:10:02.761+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-1 / E-1101 / [A+B] reason=semester not selected
+2026-09-04T22:10:02.761+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-3 / E-2101 / [A+B] reason=semester not selected
+2026-09-04T22:10:02.761+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-7 / E-4101 / [A+B+CT] reason=semester not selected
+2026-09-04T22:10:02.761+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : SOLVER INPUT SUMMARY:
+2026-09-04T22:10:02.766+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Sem-2: assignments=21, grouped=6, singleton=15
+2026-09-04T22:10:02.766+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   Combined groups in solver: 3
+2026-09-04T22:10:02.766+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : ========== END GENERATION SCOPE DIAGNOSTIC ==========
+2026-09-04T22:10:02.766+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : SEMESTER Sem-2: 21 scheduling units, deadline=1788536462766ms, frozenStaff=0, frozenSections=0
+2026-09-04T22:10:02.782+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : SEMESTER Sem-2: 0 elective groups (candidates: [])
+2026-09-04T22:10:02.798+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=0 unit=Semester 2 / Sections A + B / CST-1241 / LECTURE course=CST-1241 options=25 mrvScanned=21
+2026-09-04T22:10:02.814+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=0 selected=CST-1241 cmr=2x2 shape=2x2 priority=3 combined=true anchor=true options=25 section=f19a0bb5,81004274
+2026-09-04T22:10:02.830+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=0 unit=Semester 2 / Sections A + B / CST-1241 / LECTURE course=CST-1241 options=20 mrvScanned=42
+2026-09-04T22:10:02.830+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=0 selected=CST-1241 cmr=2x2 shape=2x2 priority=3 combined=true anchor=true options=20 section=f19a0bb5,81004274
+2026-09-04T22:10:02.845+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [COMBINED-ANCHOR] group=e2127e75-fa2f-4db6-b070-167f554f8bb0 course=CST-1241 sections=A+B anchorSection=A placements=[Monday P1-P2, Tuesday P1-P2]
+2026-09-04T22:10:02.845+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [COMBINED-INHERIT] group=e2127e75-fa2f-4db6-b070-167f554f8bb0 section=B sourceSection=A placements=[Monday P1-P2, Tuesday P1-P2]
+2026-09-04T22:10:02.845+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=1 unit=Semester 2 / Sections A + B / M-1201 / LECTURE course=M-1201 options=21 mrvScanned=62
+2026-09-04T22:10:02.845+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=1 selected=M-1201 cmr=2x2 shape=2x2 priority=3 combined=true anchor=true options=21 section=f19a0bb5,81004274
+2026-09-04T22:10:02.861+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=1 unit=Semester 2 / Sections A + B / M-1201 / LECTURE course=M-1201 options=16 mrvScanned=82
+2026-09-04T22:10:02.861+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=1 selected=M-1201 cmr=2x2 shape=2x2 priority=3 combined=true anchor=true options=16 section=f19a0bb5,81004274
+2026-09-04T22:10:02.861+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [COMBINED-ANCHOR] group=56fd035c-9d98-4c5b-87ef-77b0c682506d course=M-1201 sections=A+B anchorSection=A placements=[Wednesday P1-P2, Thursday P1-P2]
+2026-09-04T22:10:02.861+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [COMBINED-INHERIT] group=56fd035c-9d98-4c5b-87ef-77b0c682506d section=B sourceSection=A placements=[Wednesday P1-P2, Thursday P1-P2]
+2026-09-04T22:10:02.861+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=2 unit=Semester 2 / Sections A + B / E-1201 / LECTURE course=E-1201 options=17 mrvScanned=101
+2026-09-04T22:10:02.861+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=2 selected=E-1201 cmr=2x2 shape=2x2 priority=3 combined=true anchor=true options=17 section=f19a0bb5,81004274
+2026-09-04T22:10:02.861+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=2 unit=Semester 2 / Sections A + B / E-1201 / LECTURE course=E-1201 options=12 mrvScanned=120
+2026-09-04T22:10:02.861+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=2 selected=E-1201 cmr=2x2 shape=2x2 priority=3 combined=true anchor=true options=12 section=f19a0bb5,81004274
+2026-09-04T22:10:02.872+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [COMBINED-ANCHOR] group=06ce3f89-276f-42fe-89c0-64cdeb743722 course=E-1201 sections=A+B anchorSection=A placements=[Monday P3-P4, Friday P5-P6]
+2026-09-04T22:10:02.872+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [COMBINED-INHERIT] group=06ce3f89-276f-42fe-89c0-64cdeb743722 section=B sourceSection=A placements=[Monday P3-P4, Friday P5-P6]
+2026-09-04T22:10:02.872+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1223 / LECTURE course=CST-1223 options=18 mrvScanned=138
+2026-09-04T22:10:02.872+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=18 section=81004274
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1223 / LECTURE course=CST-1223 options=14 mrvScanned=156
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=14 section=81004274
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1223 / LECTURE course=CST-1223 options=10 mrvScanned=174
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=10 section=81004274
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1223 / LECTURE course=CST-1223 options=6 mrvScanned=192
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=6 section=81004274
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section B / CST-1223 / LECTURE course=CST-1223 options=14 mrvScanned=209
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=14 section=f19a0bb5
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section B / CST-1223 / LECTURE course=CST-1223 options=11 mrvScanned=226
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=11 section=f19a0bb5
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section B / CST-1223 / LECTURE course=CST-1223 options=8 mrvScanned=243
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=8 section=f19a0bb5
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section B / CST-1223 / LECTURE course=CST-1223 options=5 mrvScanned=260
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Monday P5-P5
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Monday P6-P6
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P1-P1
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P2-P2
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P3-P3
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=5 section=f19a0bb5
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section C / CST-1223 / LECTURE course=CST-1223 options=22 mrvScanned=276
+2026-09-04T22:10:02.877+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=22 section=adc0d7f4
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section C / CST-1223 / LECTURE course=CST-1223 options=16 mrvScanned=292
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=16 section=adc0d7f4
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section C / CST-1223 / LECTURE course=CST-1223 options=12 mrvScanned=308
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=12 section=adc0d7f4
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section C / CST-1223 / LECTURE course=CST-1223 options=8 mrvScanned=324
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=8 section=adc0d7f4
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1234 / LECTURE course=CST-1234 options=9 mrvScanned=339
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=1x2 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=9 section=81004274
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section B / CST-1234 / LECTURE course=CST-1234 options=7 mrvScanned=353
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=1x2 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=7 section=f19a0bb5
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1234 / LECTURE course=CST-1234 options=9 mrvScanned=366
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=2x1 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=9 section=81004274
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1234 / LECTURE course=CST-1234 options=6 mrvScanned=379
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=2x1 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=6 section=81004274
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section B / CST-1234 / LECTURE course=CST-1234 options=9 mrvScanned=391
+2026-09-04T22:10:02.893+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=2x1 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=9 section=f19a0bb5
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section B / CST-1234 / LECTURE course=CST-1234 options=8 mrvScanned=403
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=2x1 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=8 section=f19a0bb5
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section C / CST-1234 / LECTURE course=CST-1234 options=11 mrvScanned=414
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=1x2 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=11 section=adc0d7f4
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section C / CST-1234 / LECTURE course=CST-1234 options=13 mrvScanned=424
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=2x1 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=13 section=adc0d7f4
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section C / CST-1234 / LECTURE course=CST-1234 options=9 mrvScanned=434
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=2x1 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=9 section=adc0d7f4
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1212 / LAB course=CST-1212 options=5 mrvScanned=443
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Monday P5-P6
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Wednesday P5-P6
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Thursday P4-P5
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P1-P2
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P2-P3
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1212 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=5 section=81004274
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1212 / LAB course=CST-1212 options=4 mrvScanned=452
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Monday P5-P6
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Thursday P4-P5
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P1-P2
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P2-P3
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1212 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=4 section=81004274
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=4 unit=Semester 2 / Section A / P-1201 / LECTURE course=P-1201 options=3 mrvScanned=460
+2026-09-04T22:10:02.909+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Thursday P4-P5
+2026-09-04T22:10:02.925+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P1-P2
+2026-09-04T22:10:02.925+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P2-P3
+2026-09-04T22:10:02.925+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=4 selected=P-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=3 section=81004274
+2026-09-04T22:10:02.925+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=4 unit=Semester 2 / Section A / P-1201 / LECTURE course=P-1201 options=2 mrvScanned=468
+2026-09-04T22:10:02.928+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P1-P2
+2026-09-04T22:10:02.928+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P2-P3
+2026-09-04T22:10:02.928+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=4 selected=P-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=2 section=81004274
+2026-09-04T22:10:02.928+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=4 unit=Semester 2 / Section B / P-1201 / LECTURE course=P-1201 options=3 mrvScanned=475
+2026-09-04T22:10:02.928+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Tuesday P4-P5
+2026-09-04T22:10:02.931+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Wednesday P4-P5
+2026-09-04T22:10:02.931+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P3-P4
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=4 selected=P-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=3 section=f19a0bb5
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=4 unit=Semester 2 / Section B / P-1201 / LECTURE course=P-1201 options=2 mrvScanned=482
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Wednesday P4-P5
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P3-P4
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=4 selected=P-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=2 section=f19a0bb5
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=4 unit=Semester 2 / Section B / CST-1212 / LAB course=CST-1212 options=4 mrvScanned=488
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Thursday P4-P5
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Thursday P5-P6
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P2-P3
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P3-P4
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=4 selected=CST-1212 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=4 section=f19a0bb5
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=4 unit=Semester 2 / Section B / CST-1212 / LAB course=CST-1212 options=2 mrvScanned=494
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P2-P3
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P3-P4
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=4 selected=CST-1212 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=2 section=f19a0bb5
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=5 unit=Semester 2 / Section C / P-1201 / LECTURE course=P-1201 options=9 mrvScanned=499
+2026-09-04T22:10:02.933+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=5 selected=P-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=9 section=adc0d7f4
+2026-09-04T22:10:02.941+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=5 unit=Semester 2 / Section C / CST-1212 / LAB course=CST-1212 options=8 mrvScanned=504
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=5 selected=CST-1212 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=8 section=adc0d7f4
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=5 unit=Semester 2 / Section C / CST-1212 / LAB course=CST-1212 options=7 mrvScanned=509
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=5 selected=CST-1212 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=7 section=adc0d7f4
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=8 unit=Semester 2 / Section C / P-1201 / LECTURE course=P-1201 options=5 mrvScanned=513
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Monday P4-P5
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Tuesday P2-P3
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P3-P4
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P4-P5
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Friday P5-P6
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=8 selected=P-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=5 section=adc0d7f4
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=9 unit=Semester 2 / Section C / E-1201 / LECTURE course=E-1201 options=6 mrvScanned=516
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=9 selected=E-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=6 section=adc0d7f4
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=9 unit=Semester 2 / Section C / E-1201 / LECTURE course=E-1201 options=5 mrvScanned=519
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Tuesday P4-P5
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Wednesday P4-P5
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Wednesday P5-P6
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Thursday P4-P5
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Thursday P5-P6
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=9 selected=E-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=5 section=adc0d7f4
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=9 unit=Semester 2 / Section C / M-1201 / LECTURE course=M-1201 options=6 mrvScanned=521
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=9 selected=M-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=6 section=adc0d7f4
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : TRACE depth=9 unit=Semester 2 / Section C / M-1201 / LECTURE course=M-1201 options=5 mrvScanned=523
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Monday P4-P5
+2026-09-04T22:10:02.942+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Wednesday P4-P5
+2026-09-04T22:10:02.956+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Wednesday P5-P6
+2026-09-04T22:10:03.004+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Thursday P4-P5
+2026-09-04T22:10:03.004+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   :   option: Thursday P5-P6
+2026-09-04T22:10:03.004+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [PRIORITY] depth=9 selected=M-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=5 section=adc0d7f4
+2026-09-04T22:10:03.004+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : ElectiveGroupCombinations: Main solver SOLVED (depth=0, combo#1, nodes=45)
+2026-09-04T22:10:03.004+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [DIAG Sem-2] nodes=45, mrvCalls=45, mrvUnitsScanned=525, gvpCalls=318, canPlaceCalls=7963, totalOptions=8705, scoringCalls=418
+2026-09-04T22:10:03.004+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [DIAG Sem-2] timing: mrv=7ms, gvp=0ms, canPlace=0ms, scoring=5ms
+2026-09-04T22:10:03.004+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [DIAG Sem-2] placements=45, backtracks=0
+2026-09-04T22:10:03.004+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [DIAG Sem-2] cache: hits=252, misses=273, invalidations=228
+2026-09-04T22:10:03.004+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [DIAG Sem-2] feasibility: checks=0, prunes=0
+2026-09-04T22:10:03.019+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [DIAG Sem-2] electiveCombos: attempted=0, crossSectionPruned=0, feasibilityPruned=0, solved=0, failedSolver=0
+2026-09-04T22:10:03.019+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : [DIAG Sem-2] depth profile (depth: unplaced/units/gvp/canPlace/options): 0:63/37/965/20 | 1:144/28/730/16 | 2:221/26/680/12 | 3:7196/169/4228/4 | 4:2867/21/495/2 | 5:1512/14/330/7 | 6:0/0/0/0 | 7:0/0/0/0 | 8:513/5/115/5 | 9:2079/14/330/5 | 10:0/0/0/0 | 11:1049/4/90/2 | 
+2026-09-04T22:10:03.019+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : SEMESTER Sem-2 SOLVED in 238ms: 45 schedules placed, combos=1, nodes=45
+2026-09-04T22:10:03.098+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.GenerationSnapshot           : [SNAPSHOT] COMPLETED generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45
+2026-09-04T22:10:03.098+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.TimetableGenerationService   : GENERATION COMPLETE: 51 schedules for 7f070f76-f1ce-459b-b16a-84b2066b6f51 â€” preload=140929ms, solver=-140091ms, total=838ms, combos=1, solveAttempts=1, nodes=45, dbQueries=8
+2026-09-04T22:10:06.927+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:10:06.928+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:10:07.543+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:10:07.546+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:10:12.712+06:30  INFO 21452 --- [pool-2-thread-1] c.u.service.GenerationSnapshot           : [SNAPSHOT] KEEP generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45
+2026-09-04T22:10:17.939+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:10:17.941+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:10:38.113+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51/snapshot
+2026-09-04T22:10:38.113+06:30 DEBUG 21452 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51/snapshot
+2026-09-04T22:10:38.320+06:30  INFO 21452 --- [nio-8080-exec-3] c.u.service.GenerationSnapshot           : [SNAPSHOT] LOOKUP generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 found=true status=COMPLETED
+2026-09-04T22:11:04.659+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51/generate
+2026-09-04T22:11:04.659+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51/generate
+2026-09-04T22:11:06.945+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:11:06.955+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:11:07.018+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2026-09-04T22:11:07.018+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/students
+2026-09-04T22:11:07.018+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/staff
+2026-09-04T22:11:07.018+06:30 DEBUG 21452 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/students
+2026-09-04T22:11:07.018+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/users
+2026-09-04T22:11:07.018+06:30 DEBUG 21452 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/staff
+2026-09-04T22:11:07.240+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:11:07.245+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:11:15.982+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           : [SNAPSHOT] LOOKUP generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 found=true status=COMPLETED
+2026-09-04T22:11:15.982+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.TimetableGenerationService   : [SNAPSHOT] REUSE generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45
+2026-09-04T22:11:23.045+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           : === PARTITION SUMMARY (generation=7f070f76-f1ce-459b-b16a-84b2066b6f51) ===
+2026-09-04T22:11:23.045+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           :   Sem-2: assignments=21, singletons=15, combineGroups=3, groupedAssignments=6, courseIds=7, requiredSections=3
+2026-09-04T22:11:23.045+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           : === END PARTITION SUMMARY ===
+2026-09-04T22:11:23.045+06:30  INFO 21452 --- [nio-8080-exec-7] c.u.service.GenerationSnapshot           : [SNAPSHOT] READY generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45 preloadTime=222159ms dbQueries=9 assignments=21 groupMembers=33 requirements=8 timeSlots=6 semesters=8
+2026-09-04T22:11:24.024+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:24.024+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:24.227+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.GenerationSnapshot           : [SNAPSHOT] LOOKUP generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 found=true status=PRELOADED
+2026-09-04T22:11:24.227+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.GenerationSnapshot           : [SNAPSHOT] GENERATING generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45
+2026-09-04T22:11:26.886+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:26.886+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:29.482+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:29.482+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:32.252+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:32.252+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:34.702+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : Generation 7f070f76-f1ce-459b-b16a-84b2066b6f51 scope (examType=null):
+2026-09-04T22:11:35.214+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:35.229+06:30 DEBUG 21452 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-2: A,B,C
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : ========== GENERATION SCOPE DIAGNOSTIC ==========
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : Selected semesters:
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-2: A,B,C
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : AUTO-INCLUDED COMBINED GROUPS:
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-2 / CST-1241 / [A+B] (members=2)
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-2 / M-1201 / [A+B] (members=2)
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-2 / E-1201 / [A+B] (members=2)
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : IGNORED COMBINED GROUPS (semester or all member sections outside scope):
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-6 / CS-3241 / [A+B] reason=semester not selected
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-5 / CST-3141 / [A+B+CT] reason=semester not selected
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-4 / CST-2241 / [A+B+CT] reason=semester not selected
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-1 / CST-1141 / [A+B] reason=semester not selected
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-3 / CST-2141 / [A+B] reason=semester not selected
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-7 / CST-4141 / [A+B+CT] reason=semester not selected
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-4 / E-2201 / [A+B+CT] reason=semester not selected
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-1 / M-1101 / [A+B] reason=semester not selected
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-1 / E-1101 / [A+B] reason=semester not selected
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-3 / E-2101 / [A+B] reason=semester not selected
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-7 / E-4101 / [A+B+CT] reason=semester not selected
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : SOLVER INPUT SUMMARY:
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Sem-2: assignments=21, grouped=6, singleton=15
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   Combined groups in solver: 3
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : ========== END GENERATION SCOPE DIAGNOSTIC ==========
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : SEMESTER Sem-2: 21 scheduling units, deadline=1788536555775ms, frozenStaff=0, frozenSections=0
+2026-09-04T22:11:35.775+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : SEMESTER Sem-2: 0 elective groups (candidates: [])
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=0 unit=Semester 2 / Sections A + B / CST-1241 / LECTURE course=CST-1241 options=25 mrvScanned=21
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=0 selected=CST-1241 cmr=2x2 shape=2x2 priority=3 combined=true anchor=true options=25 section=f19a0bb5,81004274
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=0 unit=Semester 2 / Sections A + B / CST-1241 / LECTURE course=CST-1241 options=20 mrvScanned=42
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=0 selected=CST-1241 cmr=2x2 shape=2x2 priority=3 combined=true anchor=true options=20 section=f19a0bb5,81004274
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=1 unit=Semester 2 / Sections A + B / M-1201 / LECTURE course=M-1201 options=21 mrvScanned=62
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=1 selected=M-1201 cmr=2x2 shape=2x2 priority=3 combined=true anchor=true options=21 section=f19a0bb5,81004274
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=1 unit=Semester 2 / Sections A + B / M-1201 / LECTURE course=M-1201 options=16 mrvScanned=82
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=1 selected=M-1201 cmr=2x2 shape=2x2 priority=3 combined=true anchor=true options=16 section=f19a0bb5,81004274
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=2 unit=Semester 2 / Sections A + B / E-1201 / LECTURE course=E-1201 options=17 mrvScanned=101
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=2 selected=E-1201 cmr=2x2 shape=2x2 priority=3 combined=true anchor=true options=17 section=f19a0bb5,81004274
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=2 unit=Semester 2 / Sections A + B / E-1201 / LECTURE course=E-1201 options=12 mrvScanned=120
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=2 selected=E-1201 cmr=2x2 shape=2x2 priority=3 combined=true anchor=true options=12 section=f19a0bb5,81004274
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1223 / LECTURE course=CST-1223 options=18 mrvScanned=138
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=18 section=81004274
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1223 / LECTURE course=CST-1223 options=14 mrvScanned=156
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=14 section=81004274
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1223 / LECTURE course=CST-1223 options=10 mrvScanned=174
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=10 section=81004274
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1223 / LECTURE course=CST-1223 options=6 mrvScanned=192
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=6 section=81004274
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section B / CST-1223 / LECTURE course=CST-1223 options=14 mrvScanned=209
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=14 section=f19a0bb5
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section B / CST-1223 / LECTURE course=CST-1223 options=11 mrvScanned=226
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=11 section=f19a0bb5
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section B / CST-1223 / LECTURE course=CST-1223 options=8 mrvScanned=243
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=8 section=f19a0bb5
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section B / CST-1223 / LECTURE course=CST-1223 options=5 mrvScanned=260
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Monday P5-P5
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Monday P6-P6
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P1-P1
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P2-P2
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P3-P3
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=5 section=f19a0bb5
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section C / CST-1223 / LECTURE course=CST-1223 options=22 mrvScanned=276
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=22 section=adc0d7f4
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section C / CST-1223 / LECTURE course=CST-1223 options=16 mrvScanned=292
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=16 section=adc0d7f4
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section C / CST-1223 / LECTURE course=CST-1223 options=12 mrvScanned=308
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=12 section=adc0d7f4
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section C / CST-1223 / LECTURE course=CST-1223 options=8 mrvScanned=324
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1223 cmr=4x1 shape=4x1 priority=1 combined=false anchor=false options=8 section=adc0d7f4
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1234 / LECTURE course=CST-1234 options=9 mrvScanned=339
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=1x2 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=9 section=81004274
+2026-09-04T22:11:35.791+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section B / CST-1234 / LECTURE course=CST-1234 options=7 mrvScanned=353
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=1x2 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=7 section=f19a0bb5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1234 / LECTURE course=CST-1234 options=9 mrvScanned=366
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=2x1 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=9 section=81004274
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1234 / LECTURE course=CST-1234 options=6 mrvScanned=379
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=2x1 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=6 section=81004274
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section B / CST-1234 / LECTURE course=CST-1234 options=9 mrvScanned=391
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=2x1 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=9 section=f19a0bb5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section B / CST-1234 / LECTURE course=CST-1234 options=8 mrvScanned=403
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=2x1 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=8 section=f19a0bb5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section C / CST-1234 / LECTURE course=CST-1234 options=11 mrvScanned=414
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=1x2 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=11 section=adc0d7f4
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section C / CST-1234 / LECTURE course=CST-1234 options=13 mrvScanned=424
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=2x1 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=13 section=adc0d7f4
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section C / CST-1234 / LECTURE course=CST-1234 options=9 mrvScanned=434
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1234 cmr=2x1 shape=mixed 2x1+1x2 priority=2 combined=false anchor=false options=9 section=adc0d7f4
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1212 / LAB course=CST-1212 options=5 mrvScanned=443
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Monday P5-P6
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Wednesday P5-P6
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Thursday P4-P5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P1-P2
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P2-P3
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1212 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=5 section=81004274
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=3 unit=Semester 2 / Section A / CST-1212 / LAB course=CST-1212 options=4 mrvScanned=452
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Monday P5-P6
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Thursday P4-P5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P1-P2
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P2-P3
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=3 selected=CST-1212 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=4 section=81004274
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=4 unit=Semester 2 / Section A / P-1201 / LECTURE course=P-1201 options=3 mrvScanned=460
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Thursday P4-P5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P1-P2
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P2-P3
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=4 selected=P-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=3 section=81004274
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=4 unit=Semester 2 / Section A / P-1201 / LECTURE course=P-1201 options=2 mrvScanned=468
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P1-P2
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P2-P3
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=4 selected=P-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=2 section=81004274
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=4 unit=Semester 2 / Section B / P-1201 / LECTURE course=P-1201 options=3 mrvScanned=475
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Tuesday P4-P5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Wednesday P4-P5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P3-P4
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=4 selected=P-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=3 section=f19a0bb5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=4 unit=Semester 2 / Section B / P-1201 / LECTURE course=P-1201 options=2 mrvScanned=482
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Wednesday P4-P5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P3-P4
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=4 selected=P-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=2 section=f19a0bb5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=4 unit=Semester 2 / Section B / CST-1212 / LAB course=CST-1212 options=4 mrvScanned=488
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Thursday P4-P5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Thursday P5-P6
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P2-P3
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P3-P4
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=4 selected=CST-1212 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=4 section=f19a0bb5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=4 unit=Semester 2 / Section B / CST-1212 / LAB course=CST-1212 options=2 mrvScanned=494
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P2-P3
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P3-P4
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=4 selected=CST-1212 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=2 section=f19a0bb5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=5 unit=Semester 2 / Section C / P-1201 / LECTURE course=P-1201 options=9 mrvScanned=499
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=5 selected=P-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=9 section=adc0d7f4
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=5 unit=Semester 2 / Section C / CST-1212 / LAB course=CST-1212 options=8 mrvScanned=504
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=5 selected=CST-1212 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=8 section=adc0d7f4
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=5 unit=Semester 2 / Section C / CST-1212 / LAB course=CST-1212 options=7 mrvScanned=509
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=5 selected=CST-1212 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=7 section=adc0d7f4
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=8 unit=Semester 2 / Section C / P-1201 / LECTURE course=P-1201 options=5 mrvScanned=513
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Monday P4-P5
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Tuesday P2-P3
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P3-P4
+2026-09-04T22:11:35.807+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P4-P5
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Friday P5-P6
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=8 selected=P-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=5 section=adc0d7f4
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=9 unit=Semester 2 / Section C / E-1201 / LECTURE course=E-1201 options=6 mrvScanned=516
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=9 selected=E-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=6 section=adc0d7f4
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=9 unit=Semester 2 / Section C / E-1201 / LECTURE course=E-1201 options=5 mrvScanned=519
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Tuesday P4-P5
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Wednesday P4-P5
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Wednesday P5-P6
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Thursday P4-P5
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Thursday P5-P6
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=9 selected=E-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=5 section=adc0d7f4
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=9 unit=Semester 2 / Section C / M-1201 / LECTURE course=M-1201 options=6 mrvScanned=521
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=9 selected=M-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=6 section=adc0d7f4
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : TRACE depth=9 unit=Semester 2 / Section C / M-1201 / LECTURE course=M-1201 options=5 mrvScanned=523
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Monday P4-P5
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Wednesday P4-P5
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Wednesday P5-P6
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Thursday P4-P5
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   :   option: Thursday P5-P6
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [PRIORITY] depth=9 selected=M-1201 cmr=2x2 shape=2x2 priority=3 combined=false anchor=false options=5 section=adc0d7f4
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : ElectiveGroupCombinations: Main solver SOLVED (depth=0, combo#1, nodes=45)
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [DIAG Sem-2] nodes=45, mrvCalls=45, mrvUnitsScanned=525, gvpCalls=318, canPlaceCalls=7963, totalOptions=8705, scoringCalls=418
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [DIAG Sem-2] timing: mrv=2ms, gvp=0ms, canPlace=0ms, scoring=1ms
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [DIAG Sem-2] placements=45, backtracks=0
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [DIAG Sem-2] cache: hits=252, misses=273, invalidations=228
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [DIAG Sem-2] feasibility: checks=0, prunes=0
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [DIAG Sem-2] electiveCombos: attempted=0, crossSectionPruned=0, feasibilityPruned=0, solved=0, failedSolver=0
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : [DIAG Sem-2] depth profile (depth: unplaced/units/gvp/canPlace/options): 0:63/37/965/20 | 1:144/28/730/16 | 2:221/26/680/12 | 3:7196/169/4228/4 | 4:2867/21/495/2 | 5:1512/14/330/7 | 6:0/0/0/0 | 7:0/0/0/0 | 8:513/5/115/5 | 9:2079/14/330/5 | 10:0/0/0/0 | 11:1049/4/90/2 | 
+2026-09-04T22:11:35.822+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : SEMESTER Sem-2 SOLVED in 47ms: 45 schedules placed, combos=1, nodes=45
+2026-09-04T22:11:35.838+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.GenerationSnapshot           : [SNAPSHOT] COMPLETED generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45
+2026-09-04T22:11:35.838+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.TimetableGenerationService   : GENERATION COMPLETE: 51 schedules for 7f070f76-f1ce-459b-b16a-84b2066b6f51 â€” preload=222159ms, solver=-210548ms, total=11611ms, combos=1, solveAttempts=1, nodes=45, dbQueries=9
+2026-09-04T22:11:37.783+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:37.796+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:40.447+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:40.449+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:43.018+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:43.018+06:30 DEBUG 21452 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:44.599+06:30  INFO 21452 --- [pool-2-thread-2] c.u.service.GenerationSnapshot           : [SNAPSHOT] KEEP generationId=7f070f76-f1ce-459b-b16a-84b2066b6f51 snapshotId=15082459-8e7c-47ae-9221-2a14ccdccd45
+2026-09-04T22:11:45.670+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:11:45.670+06:30 DEBUG 21452 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/7f070f76-f1ce-459b-b16a-84b2066b6f51
+2026-09-04T22:12:06.909+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:12:06.918+06:30 DEBUG 21452 --- [nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-04T22:12:06.964+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/refresh
+2026-09-04T22:12:06.964+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-04T22:12:06.964+06:30 DEBUG 21452 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/refresh
+2026-09-04T22:12:08.899+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:12:08.899+06:30 DEBUG 21452 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:12:09.313+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock
+2026-09-04T22:12:09.313+06:30 DEBUG 21452 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/generations/fb78632d-5cce-46ca-8388-778570eb0847/lock

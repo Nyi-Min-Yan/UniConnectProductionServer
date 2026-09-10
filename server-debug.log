@@ -1,0 +1,306 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-08-19T06:59:54.360+06:30  INFO 5892 --- [           main] com.unicconnect.UniConnectApplication    : Starting UniConnectApplication using Java 21.0.11 with PID 5892 (D:\UniConnect\UniConnectServer\target\classes started by Khaing Zin Phyo in D:\UniConnect\UniConnectServer)
+2026-08-19T06:59:54.360+06:30  INFO 5892 --- [           main] com.unicconnect.UniConnectApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-08-19T06:59:55.820+06:30  INFO 5892 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-19T06:59:56.007+06:30  INFO 5892 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 171 ms. Found 27 JPA repository interfaces.
+2026-08-19T06:59:57.154+06:30  INFO 5892 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-19T06:59:57.179+06:30  INFO 5892 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-19T06:59:57.179+06:30  INFO 5892 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-08-19T06:59:57.306+06:30  INFO 5892 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-19T06:59:57.306+06:30  INFO 5892 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2874 ms
+2026-08-19T06:59:57.591+06:30  INFO 5892 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-19T06:59:57.704+06:30  INFO 5892 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-08-19T06:59:57.765+06:30  INFO 5892 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-19T06:59:58.178+06:30  INFO 5892 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-19T06:59:58.225+06:30  INFO 5892 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-19T07:00:02.626+06:30  INFO 5892 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@605eb072
+2026-08-19T07:00:02.628+06:30  INFO 5892 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-19T07:00:06.236+06:30  INFO 5892 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-19T07:00:07.599+06:30  INFO 5892 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-19T07:00:08.246+06:30  INFO 5892 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-19T07:00:10.381+06:30  INFO 5892 --- [           main] com.unicconnect.service.StorageService   : StorageService active mode: local
+2026-08-19T07:00:11.326+06:30  INFO 5892 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6fa9e6db, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47d41516, org.springframework.security.web.context.SecurityContextHolderFilter@630bd6c1, org.springframework.security.web.header.HeaderWriterFilter@4ea7218f, org.springframework.web.filter.CorsFilter@1040bcfb, org.springframework.security.web.authentication.logout.LogoutFilter@2d94467b, com.unicconnect.security.JwtAuthenticationFilter@40d52be7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@622ec92a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@620b0fad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74921a, org.springframework.security.web.session.SessionManagementFilter@60ae0977, org.springframework.security.web.access.ExceptionTranslationFilter@7419c8e2, org.springframework.security.web.access.intercept.AuthorizationFilter@454db313]
+2026-08-19T07:00:11.737+06:30  INFO 5892 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-08-19T07:00:11.751+06:30  INFO 5892 --- [           main] com.unicconnect.UniConnectApplication    : Started UniConnectApplication in 18.015 seconds (process running for 18.737)
+2026-08-19T07:00:11.889+06:30 DEBUG 5892 --- [           main] org.hibernate.SQL                        : select r1_0.role_id from roles r1_0 where r1_0.role_name=? fetch first ? rows only
+2026-08-19T07:00:12.207+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SYSTEM_ADMIN]
+2026-08-19T07:00:12.207+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:INTEGER) <- [1]
+2026-08-19T07:00:12.485+06:30 DEBUG 5892 --- [           main] org.hibernate.SQL                        : select r1_0.role_id from roles r1_0 where r1_0.role_name=? fetch first ? rows only
+2026-08-19T07:00:12.485+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [STAFF]
+2026-08-19T07:00:12.485+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:INTEGER) <- [1]
+2026-08-19T07:00:12.872+06:30 DEBUG 5892 --- [           main] org.hibernate.SQL                        : select r1_0.role_id from roles r1_0 where r1_0.role_name=? fetch first ? rows only
+2026-08-19T07:00:12.872+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [STUDENT]
+2026-08-19T07:00:12.872+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:INTEGER) <- [1]
+2026-08-19T07:00:13.119+06:30  INFO 5892 --- [           main] com.unicconnect.config.DataInitializer   : Roles seeded successfully
+2026-08-19T07:00:13.134+06:30 DEBUG 5892 --- [           main] org.hibernate.SQL                        : select p1_0.position_id from positions p1_0 where p1_0.position_name=? fetch first ? rows only
+2026-08-19T07:00:13.134+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [LECTURER]
+2026-08-19T07:00:13.134+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:INTEGER) <- [1]
+2026-08-19T07:00:13.394+06:30 DEBUG 5892 --- [           main] org.hibernate.SQL                        : select p1_0.position_id from positions p1_0 where p1_0.position_name=? fetch first ? rows only
+2026-08-19T07:00:13.394+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [HOD]
+2026-08-19T07:00:13.394+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:INTEGER) <- [1]
+2026-08-19T07:00:13.652+06:30 DEBUG 5892 --- [           main] org.hibernate.SQL                        : select p1_0.position_id from positions p1_0 where p1_0.position_name=? fetch first ? rows only
+2026-08-19T07:00:13.652+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [STUDENT_AFFAIRS_OFFICER]
+2026-08-19T07:00:13.652+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:INTEGER) <- [1]
+2026-08-19T07:00:13.939+06:30 DEBUG 5892 --- [           main] org.hibernate.SQL                        : select p1_0.position_id from positions p1_0 where p1_0.position_name=? fetch first ? rows only
+2026-08-19T07:00:13.939+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [FINANCE_OFFICER]
+2026-08-19T07:00:13.939+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:INTEGER) <- [1]
+2026-08-19T07:00:14.211+06:30 DEBUG 5892 --- [           main] org.hibernate.SQL                        : select p1_0.position_id from positions p1_0 where p1_0.position_name=? fetch first ? rows only
+2026-08-19T07:00:14.211+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [ADMINISTRATIVE_OFFICER]
+2026-08-19T07:00:14.213+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:INTEGER) <- [1]
+2026-08-19T07:00:14.687+06:30 DEBUG 5892 --- [           main] org.hibernate.SQL                        : select p1_0.position_id from positions p1_0 where p1_0.position_name=? fetch first ? rows only
+2026-08-19T07:00:14.689+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SENIOR_CLERK]
+2026-08-19T07:00:14.689+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:INTEGER) <- [1]
+2026-08-19T07:00:14.941+06:30 DEBUG 5892 --- [           main] org.hibernate.SQL                        : select p1_0.position_id from positions p1_0 where p1_0.position_name=? fetch first ? rows only
+2026-08-19T07:00:14.941+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [JUNIOR_CLERK]
+2026-08-19T07:00:14.941+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:INTEGER) <- [1]
+2026-08-19T07:00:15.249+06:30 DEBUG 5892 --- [           main] org.hibernate.SQL                        : select p1_0.position_id from positions p1_0 where p1_0.position_name=? fetch first ? rows only
+2026-08-19T07:00:15.249+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [RECTOR]
+2026-08-19T07:00:15.249+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:INTEGER) <- [1]
+2026-08-19T07:00:15.508+06:30 DEBUG 5892 --- [           main] org.hibernate.SQL                        : select p1_0.position_id from positions p1_0 where p1_0.position_name=? fetch first ? rows only
+2026-08-19T07:00:15.508+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [PRO_RECTOR]
+2026-08-19T07:00:15.508+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:INTEGER) <- [1]
+2026-08-19T07:00:15.993+06:30  INFO 5892 --- [           main] com.unicconnect.config.DataInitializer   : Positions seeded successfully
+2026-08-19T07:00:15.993+06:30 DEBUG 5892 --- [           main] org.hibernate.SQL                        : select u1_0.user_id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-08-19T07:00:15.993+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [admin@unicconnect.com]
+2026-08-19T07:00:15.993+06:30 TRACE 5892 --- [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:INTEGER) <- [1]
+2026-08-19T07:00:37.789+06:30  INFO 5892 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-19T07:00:37.789+06:30  INFO 5892 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-19T07:00:37.791+06:30  INFO 5892 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-19T07:00:38.367+06:30 ERROR 5892 --- [nio-8080-exec-2] c.u.exception.GlobalExceptionHandler     : Unhandled exception on /api/auth/login
+
+org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.unicconnect.dto.response.AuthResponse> com.unicconnect.controller.AuthController.login(com.unicconnect.dto.request.LoginRequest,jakarta.servlet.http.HttpServletRequest)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:164) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:135) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at com.unicconnect.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:49) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.4.jar:6.2.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-08-19T07:01:09.851+06:30 DEBUG 5892 --- [nio-8080-exec-8] org.hibernate.SQL                        : select s1_0.staff_id,s1_0.address,s1_0.batch_year,s1_0.created_at,s1_0.joined_at,s1_0.left_date,s1_0.phone_no,s1_0.staff_name,s1_0.staff_no,u2_0.unit_id,u2_0.description,u2_0.unit_code,u2_0.unit_name,u2_0.unit_type,s1_0.updated_at,s1_0.user_id,u1_0.user_id,u1_0.account_locked_until,u1_0.created_at,u1_0.email,u1_0.failed_login_attempts,u1_0.is_active,u1_0.last_login,u1_0.password_hash,u1_0.registration_status,u1_0.role_id,u1_0.updated_at from staff s1_0 join users u1_0 on u1_0.user_id=s1_0.user_id left join organizational_units u2_0 on u2_0.unit_id=s1_0.unit_id
+2026-08-19T07:01:09.853+06:30 DEBUG 5892 --- [nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.user_id,u1_0.account_locked_until,u1_0.created_at,u1_0.email,u1_0.failed_login_attempts,u1_0.is_active,u1_0.last_login,u1_0.password_hash,u1_0.registration_status,u1_0.role_id,r1_0.role_id,r1_0.description,r1_0.role_name,u1_0.updated_at from users u1_0 join roles r1_0 on r1_0.role_id=u1_0.role_id
+2026-08-19T07:01:11.035+06:30 DEBUG 5892 --- [nio-8080-exec-8] org.hibernate.SQL                        : select spa1_0.position_assignment_id,spa1_0.assigned_by_staff_id,spa1_0.end_date,spa1_0.position_id,p1_0.position_id,p1_0.description,p1_0.position_name,spa1_0.staff_id,s1_0.staff_id,s1_0.address,s1_0.batch_year,s1_0.created_at,s1_0.joined_at,s1_0.left_date,s1_0.phone_no,s1_0.staff_name,s1_0.staff_no,s1_0.unit_id,s1_0.updated_at,s1_0.user_id,spa1_0.start_date from staff_position_assignments spa1_0 join positions p1_0 on p1_0.position_id=spa1_0.position_id join staff s1_0 on s1_0.staff_id=spa1_0.staff_id
+2026-08-19T07:01:11.600+06:30 DEBUG 5892 --- [nio-8080-exec-7] org.hibernate.SQL                        : select s1_0.student_id,s1_0.address,s1_0.batch_year,s1_0.created_at,s1_0.major_id,m1_0.major_id,m1_0.major_code,m1_0.major_name,m1_0.unit_id,s1_0.phone_no,s1_0.roll_no,s3_0.section_id,s3_0.section_name,s2_0.semester_id,s2_0.semester_no,s1_0.student_name,t1_0.term_id,t1_0.academic_year,t1_0.end_date,t1_0.start_date,t1_0.status,s1_0.updated_at,s1_0.user_id,u1_0.user_id,u1_0.account_locked_until,u1_0.created_at,u1_0.email,u1_0.failed_login_attempts,u1_0.is_active,u1_0.last_login,u1_0.password_hash,u1_0.registration_status,u1_0.role_id,u1_0.updated_at from students s1_0 join users u1_0 on u1_0.user_id=s1_0.user_id join majors m1_0 on m1_0.major_id=s1_0.major_id left join academic_terms t1_0 on t1_0.term_id=s1_0.term_id left join semesters s2_0 on s2_0.semester_id=s1_0.semester_id left join sections s3_0 on s3_0.section_id=s1_0.section_id
+2026-08-19T07:01:12.050+06:30 DEBUG 5892 --- [nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.user_id,u1_0.account_locked_until,u1_0.created_at,u1_0.email,u1_0.failed_login_attempts,u1_0.is_active,u1_0.last_login,u1_0.password_hash,u1_0.registration_status,u1_0.role_id,u1_0.updated_at from users u1_0 where u1_0.email=?
+2026-08-19T07:01:12.050+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [bobo100@gmail.com]
+2026-08-19T07:01:12.462+06:30 DEBUG 5892 --- [nio-8080-exec-9] org.hibernate.SQL                        : select r1_0.role_id,r1_0.description,r1_0.role_name from roles r1_0 where r1_0.role_id=?
+2026-08-19T07:01:12.462+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (1:UUID) <- [bc605a94-e453-439a-ac4b-5032ca39cf07]
+2026-08-19T07:01:13.052+06:30 DEBUG 5892 --- [nio-8080-exec-9] org.hibernate.SQL                        : insert into refresh_tokens (created_at,device_name,expires_at,ip_address,revoked,token_hash,user_id,token_id) values (?,?,?,?,?,?,?,?)
+2026-08-19T07:01:13.052+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP_UTC) <- [2026-08-19T00:31:13.020385Z]
+2026-08-19T07:01:13.052+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [null]
+2026-08-19T07:01:13.052+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (3:TIMESTAMP_UTC) <- [2026-08-26T00:31:12.972596100Z]
+2026-08-19T07:01:13.052+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (4:VARCHAR) <- [127.0.0.1]
+2026-08-19T07:01:13.052+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (5:BOOLEAN) <- [false]
+2026-08-19T07:01:13.052+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (6:VARCHAR) <- [80d2598f199d634ddd2c3af034b426ca89158c5920f3b81cdf552c0ddd37de43]
+2026-08-19T07:01:13.052+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (7:UUID) <- [9ca5ff98-e14a-406d-b6d2-3623d8e6793d]
+2026-08-19T07:01:13.052+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (8:UUID) <- [81ef4688-a14f-4a06-b112-f0d1d2d58be0]
+2026-08-19T07:01:13.455+06:30 DEBUG 5892 --- [nio-8080-exec-9] org.hibernate.SQL                        : update users set account_locked_until=?,email=?,failed_login_attempts=?,is_active=?,last_login=?,password_hash=?,registration_status=?,role_id=?,updated_at=? where user_id=?
+2026-08-19T07:01:13.455+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP_UTC) <- [null]
+2026-08-19T07:01:13.455+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [bobo100@gmail.com]
+2026-08-19T07:01:13.455+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [0]
+2026-08-19T07:01:13.455+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (4:BOOLEAN) <- [true]
+2026-08-19T07:01:13.455+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (5:TIMESTAMP_UTC) <- [2026-08-19T00:31:12.433052200Z]
+2026-08-19T07:01:13.455+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (6:VARCHAR) <- [$2a$10$aSaQvVJo6BSGJ0g.cSAq0eM3sou0cQS/ngsNqfovqMjyaOARypH6e]
+2026-08-19T07:01:13.455+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (7:VARCHAR) <- [APPROVED]
+2026-08-19T07:01:13.455+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (8:UUID) <- [bc605a94-e453-439a-ac4b-5032ca39cf07]
+2026-08-19T07:01:13.455+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (9:TIMESTAMP_UTC) <- [2026-08-19T00:31:13.443278Z]
+2026-08-19T07:01:13.455+06:30 TRACE 5892 --- [nio-8080-exec-9] org.hibernate.orm.jdbc.bind              : binding parameter (10:UUID) <- [9ca5ff98-e14a-406d-b6d2-3623d8e6793d]
+2026-08-19T07:01:14.358+06:30 DEBUG 5892 --- [io-8080-exec-10] org.hibernate.SQL                        : select s1_0.student_id,s1_0.address,s1_0.batch_year,s1_0.created_at,s1_0.major_id,s1_0.phone_no,s1_0.roll_no,s1_0.section_id,s1_0.semester_id,s1_0.student_name,s1_0.term_id,s1_0.updated_at,s1_0.user_id from students s1_0 where s1_0.student_id=?
+2026-08-19T07:01:14.358+06:30 TRACE 5892 --- [io-8080-exec-10] org.hibernate.orm.jdbc.bind              : binding parameter (1:UUID) <- [10033446-47f7-4df7-8489-a7e6be736c38]
+2026-08-19T07:01:14.790+06:30 DEBUG 5892 --- [io-8080-exec-10] org.hibernate.SQL                        : select distinct cs1_0.schedule_id,cs1_0.created_at,cs1_0.day_of_week,cs1_0.end_slot_id,es1_0.slot_id,es1_0.display_order,es1_0.end_time,es1_0.period_no,es1_0.start_time,cs1_0.generation_id,g1_0.generation_id,g1_0.created_at,g1_0.finished_at,g1_0.generated_by_staff_id,g1_0.published_at,g1_0.scope_json,g1_0.started_at,g1_0.status,g1_0.term_id,cs1_0.schedule_status,cs1_0.schedule_type,cs1_0.start_slot_id,ss1_0.slot_id,ss1_0.display_order,ss1_0.end_time,ss1_0.period_no,ss1_0.start_time,ta1_0.assignment_id,ta1_0.assigned_at,ta1_0.assigned_by_staff_id,ta1_0.assignment_status,ta1_0.course_id,c1_0.course_id,c1_0.course_code,c1_0.course_name,c1_0.credit_unit,c1_0.display_order,c1_0.is_required,c1_0.major_id,c1_0.semester_id,c1_0.unit_id,ta1_0.section_id,s2_0.section_id,s2_0.section_name,ta1_0.staff_id,s1_0.staff_id,s1_0.address,s1_0.batch_year,s1_0.created_at,s1_0.joined_at,s1_0.left_date,s1_0.phone_no,s1_0.staff_name,s1_0.staff_no,s1_0.unit_id,s1_0.updated_at,s1_0.user_id,ta1_0.term_id,cs1_0.teaching_group_id from class_schedules cs1_0 join generation_sessions g1_0 on g1_0.generation_id=cs1_0.generation_id left join teaching_assignments ta1_0 on ta1_0.assignment_id=cs1_0.teaching_assignment_id left join courses c1_0 on c1_0.course_id=ta1_0.course_id left join staff s1_0 on s1_0.staff_id=ta1_0.staff_id left join sections s2_0 on s2_0.section_id=ta1_0.section_id join time_slots ss1_0 on ss1_0.slot_id=cs1_0.start_slot_id join time_slots es1_0 on es1_0.slot_id=cs1_0.end_slot_id left join teaching_assignment_groups tg1_0 on tg1_0.group_id=cs1_0.teaching_group_id left join teaching_assignment_group_members m1_0 on tg1_0.group_id=m1_0.group_id join teaching_assignments a1_0 on a1_0.assignment_id=m1_0.assignment_id where g1_0.term_id=? and (s2_0.section_id=? or a1_0.section_id=?)
+2026-08-19T07:01:14.792+06:30 TRACE 5892 --- [io-8080-exec-10] org.hibernate.orm.jdbc.bind              : binding parameter (1:UUID) <- [6eea6860-074e-4e8a-973d-7a538325bef1]
+2026-08-19T07:01:14.792+06:30 TRACE 5892 --- [io-8080-exec-10] org.hibernate.orm.jdbc.bind              : binding parameter (2:UUID) <- [c183c6d5-9810-40c7-8d93-7636c2c295fe]
+2026-08-19T07:01:14.792+06:30 TRACE 5892 --- [io-8080-exec-10] org.hibernate.orm.jdbc.bind              : binding parameter (3:UUID) <- [c183c6d5-9810-40c7-8d93-7636c2c295fe]
+2026-08-19T07:01:15.379+06:30 DEBUG 5892 --- [nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.user_id,u1_0.account_locked_until,u1_0.created_at,u1_0.email,u1_0.failed_login_attempts,u1_0.is_active,u1_0.last_login,u1_0.password_hash,u1_0.registration_status,u1_0.role_id,u1_0.updated_at from users u1_0 where u1_0.email=?
+2026-08-19T07:01:15.379+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [bobo100@gmail.com]
+2026-08-19T07:01:15.715+06:30 DEBUG 5892 --- [nio-8080-exec-1] org.hibernate.SQL                        : select r1_0.role_id,r1_0.description,r1_0.role_name from roles r1_0 where r1_0.role_id=?
+2026-08-19T07:01:15.715+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (1:UUID) <- [bc605a94-e453-439a-ac4b-5032ca39cf07]
+2026-08-19T07:01:16.021+06:30 DEBUG 5892 --- [nio-8080-exec-1] org.hibernate.SQL                        : insert into refresh_tokens (created_at,device_name,expires_at,ip_address,revoked,token_hash,user_id,token_id) values (?,?,?,?,?,?,?,?)
+2026-08-19T07:01:16.021+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP_UTC) <- [2026-08-19T00:31:16.021048Z]
+2026-08-19T07:01:16.021+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [null]
+2026-08-19T07:01:16.021+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (3:TIMESTAMP_UTC) <- [2026-08-26T00:31:16.021048100Z]
+2026-08-19T07:01:16.021+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (4:VARCHAR) <- [127.0.0.1]
+2026-08-19T07:01:16.021+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (5:BOOLEAN) <- [false]
+2026-08-19T07:01:16.021+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (6:VARCHAR) <- [605ed04e8412b0ccd2ee3cfe3fa714cac3b51e5e8b72283588d23d80fa8572fa]
+2026-08-19T07:01:16.021+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (7:UUID) <- [9ca5ff98-e14a-406d-b6d2-3623d8e6793d]
+2026-08-19T07:01:16.021+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (8:UUID) <- [9c40aca8-4f0a-4dea-b82b-dec545deeade]
+2026-08-19T07:01:16.291+06:30 DEBUG 5892 --- [nio-8080-exec-1] org.hibernate.SQL                        : update users set account_locked_until=?,email=?,failed_login_attempts=?,is_active=?,last_login=?,password_hash=?,registration_status=?,role_id=?,updated_at=? where user_id=?
+2026-08-19T07:01:16.291+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP_UTC) <- [null]
+2026-08-19T07:01:16.291+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [bobo100@gmail.com]
+2026-08-19T07:01:16.291+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [0]
+2026-08-19T07:01:16.291+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (4:BOOLEAN) <- [true]
+2026-08-19T07:01:16.291+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (5:TIMESTAMP_UTC) <- [2026-08-19T00:31:15.715359300Z]
+2026-08-19T07:01:16.291+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (6:VARCHAR) <- [$2a$10$aSaQvVJo6BSGJ0g.cSAq0eM3sou0cQS/ngsNqfovqMjyaOARypH6e]
+2026-08-19T07:01:16.291+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (7:VARCHAR) <- [APPROVED]
+2026-08-19T07:01:16.291+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (8:UUID) <- [bc605a94-e453-439a-ac4b-5032ca39cf07]
+2026-08-19T07:01:16.291+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (9:TIMESTAMP_UTC) <- [2026-08-19T00:31:16.291627Z]
+2026-08-19T07:01:16.291+06:30 TRACE 5892 --- [nio-8080-exec-1] org.hibernate.orm.jdbc.bind              : binding parameter (10:UUID) <- [9ca5ff98-e14a-406d-b6d2-3623d8e6793d]
+2026-08-19T07:01:16.827+06:30 DEBUG 5892 --- [nio-8080-exec-2] org.hibernate.SQL                        : select s1_0.student_id,s1_0.address,s1_0.batch_year,s1_0.created_at,s1_0.major_id,s1_0.phone_no,s1_0.roll_no,s1_0.section_id,s1_0.semester_id,s1_0.student_name,s1_0.term_id,s1_0.updated_at,s1_0.user_id from students s1_0 where s1_0.student_id=?
+2026-08-19T07:01:16.827+06:30 TRACE 5892 --- [nio-8080-exec-2] org.hibernate.orm.jdbc.bind              : binding parameter (1:UUID) <- [10033446-47f7-4df7-8489-a7e6be736c38]
+2026-08-19T07:01:17.093+06:30 DEBUG 5892 --- [nio-8080-exec-2] org.hibernate.SQL                        : select distinct cs1_0.schedule_id,cs1_0.created_at,cs1_0.day_of_week,cs1_0.end_slot_id,es1_0.slot_id,es1_0.display_order,es1_0.end_time,es1_0.period_no,es1_0.start_time,cs1_0.generation_id,g1_0.generation_id,g1_0.created_at,g1_0.finished_at,g1_0.generated_by_staff_id,g1_0.published_at,g1_0.scope_json,g1_0.started_at,g1_0.status,g1_0.term_id,cs1_0.schedule_status,cs1_0.schedule_type,cs1_0.start_slot_id,ss1_0.slot_id,ss1_0.display_order,ss1_0.end_time,ss1_0.period_no,ss1_0.start_time,ta1_0.assignment_id,ta1_0.assigned_at,ta1_0.assigned_by_staff_id,ta1_0.assignment_status,ta1_0.course_id,c1_0.course_id,c1_0.course_code,c1_0.course_name,c1_0.credit_unit,c1_0.display_order,c1_0.is_required,c1_0.major_id,c1_0.semester_id,c1_0.unit_id,ta1_0.section_id,s2_0.section_id,s2_0.section_name,ta1_0.staff_id,s1_0.staff_id,s1_0.address,s1_0.batch_year,s1_0.created_at,s1_0.joined_at,s1_0.left_date,s1_0.phone_no,s1_0.staff_name,s1_0.staff_no,s1_0.unit_id,s1_0.updated_at,s1_0.user_id,ta1_0.term_id,cs1_0.teaching_group_id from class_schedules cs1_0 join generation_sessions g1_0 on g1_0.generation_id=cs1_0.generation_id left join teaching_assignments ta1_0 on ta1_0.assignment_id=cs1_0.teaching_assignment_id left join courses c1_0 on c1_0.course_id=ta1_0.course_id left join staff s1_0 on s1_0.staff_id=ta1_0.staff_id left join sections s2_0 on s2_0.section_id=ta1_0.section_id join time_slots ss1_0 on ss1_0.slot_id=cs1_0.start_slot_id join time_slots es1_0 on es1_0.slot_id=cs1_0.end_slot_id left join teaching_assignment_groups tg1_0 on tg1_0.group_id=cs1_0.teaching_group_id left join teaching_assignment_group_members m1_0 on tg1_0.group_id=m1_0.group_id join teaching_assignments a1_0 on a1_0.assignment_id=m1_0.assignment_id where g1_0.term_id=? and (s2_0.section_id=? or a1_0.section_id=?)
+2026-08-19T07:01:17.102+06:30 TRACE 5892 --- [nio-8080-exec-2] org.hibernate.orm.jdbc.bind              : binding parameter (1:UUID) <- [6eea6860-074e-4e8a-973d-7a538325bef1]
+2026-08-19T07:01:17.102+06:30 TRACE 5892 --- [nio-8080-exec-2] org.hibernate.orm.jdbc.bind              : binding parameter (2:UUID) <- [c183c6d5-9810-40c7-8d93-7636c2c295fe]
+2026-08-19T07:01:17.102+06:30 TRACE 5892 --- [nio-8080-exec-2] org.hibernate.orm.jdbc.bind              : binding parameter (3:UUID) <- [c183c6d5-9810-40c7-8d93-7636c2c295fe]
+2026-08-19T07:01:17.750+06:30 DEBUG 5892 --- [nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.user_id,u1_0.account_locked_until,u1_0.created_at,u1_0.email,u1_0.failed_login_attempts,u1_0.is_active,u1_0.last_login,u1_0.password_hash,u1_0.registration_status,u1_0.role_id,u1_0.updated_at from users u1_0 where u1_0.email=?
+2026-08-19T07:01:17.750+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [bobo100@gmail.com]
+2026-08-19T07:01:18.110+06:30 DEBUG 5892 --- [nio-8080-exec-3] org.hibernate.SQL                        : select r1_0.role_id,r1_0.description,r1_0.role_name from roles r1_0 where r1_0.role_id=?
+2026-08-19T07:01:18.110+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (1:UUID) <- [bc605a94-e453-439a-ac4b-5032ca39cf07]
+2026-08-19T07:01:18.367+06:30 DEBUG 5892 --- [nio-8080-exec-3] org.hibernate.SQL                        : insert into refresh_tokens (created_at,device_name,expires_at,ip_address,revoked,token_hash,user_id,token_id) values (?,?,?,?,?,?,?,?)
+2026-08-19T07:01:18.367+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP_UTC) <- [2026-08-19T00:31:18.367705Z]
+2026-08-19T07:01:18.367+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [null]
+2026-08-19T07:01:18.367+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (3:TIMESTAMP_UTC) <- [2026-08-26T00:31:18.367705700Z]
+2026-08-19T07:01:18.367+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (4:VARCHAR) <- [127.0.0.1]
+2026-08-19T07:01:18.367+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (5:BOOLEAN) <- [false]
+2026-08-19T07:01:18.367+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (6:VARCHAR) <- [ff35f22bedd0c0c7a010db123ce3532ac54cbb32c40ea73bdaf624d760c1e347]
+2026-08-19T07:01:18.367+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (7:UUID) <- [9ca5ff98-e14a-406d-b6d2-3623d8e6793d]
+2026-08-19T07:01:18.367+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (8:UUID) <- [9cce80be-f51a-421f-8b76-b3fbb9168293]
+2026-08-19T07:01:18.886+06:30 DEBUG 5892 --- [nio-8080-exec-3] org.hibernate.SQL                        : update users set account_locked_until=?,email=?,failed_login_attempts=?,is_active=?,last_login=?,password_hash=?,registration_status=?,role_id=?,updated_at=? where user_id=?
+2026-08-19T07:01:18.886+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP_UTC) <- [null]
+2026-08-19T07:01:18.886+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [bobo100@gmail.com]
+2026-08-19T07:01:18.886+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [0]
+2026-08-19T07:01:18.886+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (4:BOOLEAN) <- [true]
+2026-08-19T07:01:18.886+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (5:TIMESTAMP_UTC) <- [2026-08-19T00:31:18.108149700Z]
+2026-08-19T07:01:18.886+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (6:VARCHAR) <- [$2a$10$aSaQvVJo6BSGJ0g.cSAq0eM3sou0cQS/ngsNqfovqMjyaOARypH6e]
+2026-08-19T07:01:18.886+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (7:VARCHAR) <- [APPROVED]
+2026-08-19T07:01:18.886+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (8:UUID) <- [bc605a94-e453-439a-ac4b-5032ca39cf07]
+2026-08-19T07:01:18.886+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (9:TIMESTAMP_UTC) <- [2026-08-19T00:31:18.881613Z]
+2026-08-19T07:01:18.886+06:30 TRACE 5892 --- [nio-8080-exec-3] org.hibernate.orm.jdbc.bind              : binding parameter (10:UUID) <- [9ca5ff98-e14a-406d-b6d2-3623d8e6793d]
+2026-08-19T07:01:19.568+06:30 DEBUG 5892 --- [nio-8080-exec-4] org.hibernate.SQL                        : select s1_0.student_id,s1_0.address,s1_0.batch_year,s1_0.created_at,s1_0.major_id,s1_0.phone_no,s1_0.roll_no,s1_0.section_id,s1_0.semester_id,s1_0.student_name,s1_0.term_id,s1_0.updated_at,s1_0.user_id from students s1_0 where s1_0.student_id=?
+2026-08-19T07:01:19.568+06:30 TRACE 5892 --- [nio-8080-exec-4] org.hibernate.orm.jdbc.bind              : binding parameter (1:UUID) <- [10033446-47f7-4df7-8489-a7e6be736c38]
+2026-08-19T07:01:19.830+06:30 DEBUG 5892 --- [nio-8080-exec-4] org.hibernate.SQL                        : select distinct cs1_0.schedule_id,cs1_0.created_at,cs1_0.day_of_week,cs1_0.end_slot_id,es1_0.slot_id,es1_0.display_order,es1_0.end_time,es1_0.period_no,es1_0.start_time,cs1_0.generation_id,g1_0.generation_id,g1_0.created_at,g1_0.finished_at,g1_0.generated_by_staff_id,g1_0.published_at,g1_0.scope_json,g1_0.started_at,g1_0.status,g1_0.term_id,cs1_0.schedule_status,cs1_0.schedule_type,cs1_0.start_slot_id,ss1_0.slot_id,ss1_0.display_order,ss1_0.end_time,ss1_0.period_no,ss1_0.start_time,ta1_0.assignment_id,ta1_0.assigned_at,ta1_0.assigned_by_staff_id,ta1_0.assignment_status,ta1_0.course_id,c1_0.course_id,c1_0.course_code,c1_0.course_name,c1_0.credit_unit,c1_0.display_order,c1_0.is_required,c1_0.major_id,c1_0.semester_id,c1_0.unit_id,ta1_0.section_id,s2_0.section_id,s2_0.section_name,ta1_0.staff_id,s1_0.staff_id,s1_0.address,s1_0.batch_year,s1_0.created_at,s1_0.joined_at,s1_0.left_date,s1_0.phone_no,s1_0.staff_name,s1_0.staff_no,s1_0.unit_id,s1_0.updated_at,s1_0.user_id,ta1_0.term_id,cs1_0.teaching_group_id from class_schedules cs1_0 join generation_sessions g1_0 on g1_0.generation_id=cs1_0.generation_id left join teaching_assignments ta1_0 on ta1_0.assignment_id=cs1_0.teaching_assignment_id left join courses c1_0 on c1_0.course_id=ta1_0.course_id left join staff s1_0 on s1_0.staff_id=ta1_0.staff_id left join sections s2_0 on s2_0.section_id=ta1_0.section_id join time_slots ss1_0 on ss1_0.slot_id=cs1_0.start_slot_id join time_slots es1_0 on es1_0.slot_id=cs1_0.end_slot_id left join teaching_assignment_groups tg1_0 on tg1_0.group_id=cs1_0.teaching_group_id left join teaching_assignment_group_members m1_0 on tg1_0.group_id=m1_0.group_id join teaching_assignments a1_0 on a1_0.assignment_id=m1_0.assignment_id where g1_0.term_id=? and (s2_0.section_id=? or a1_0.section_id=?)
+2026-08-19T07:01:19.830+06:30 TRACE 5892 --- [nio-8080-exec-4] org.hibernate.orm.jdbc.bind              : binding parameter (1:UUID) <- [6eea6860-074e-4e8a-973d-7a538325bef1]
+2026-08-19T07:01:19.830+06:30 TRACE 5892 --- [nio-8080-exec-4] org.hibernate.orm.jdbc.bind              : binding parameter (2:UUID) <- [c183c6d5-9810-40c7-8d93-7636c2c295fe]
+2026-08-19T07:01:19.830+06:30 TRACE 5892 --- [nio-8080-exec-4] org.hibernate.orm.jdbc.bind              : binding parameter (3:UUID) <- [c183c6d5-9810-40c7-8d93-7636c2c295fe]
+2026-08-19T07:01:20.385+06:30 DEBUG 5892 --- [nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.user_id,u1_0.account_locked_until,u1_0.created_at,u1_0.email,u1_0.failed_login_attempts,u1_0.is_active,u1_0.last_login,u1_0.password_hash,u1_0.registration_status,u1_0.role_id,u1_0.updated_at from users u1_0 where u1_0.email=?
+2026-08-19T07:01:20.385+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [bobo100@gmail.com]
+2026-08-19T07:01:20.724+06:30 DEBUG 5892 --- [nio-8080-exec-5] org.hibernate.SQL                        : select r1_0.role_id,r1_0.description,r1_0.role_name from roles r1_0 where r1_0.role_id=?
+2026-08-19T07:01:20.724+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (1:UUID) <- [bc605a94-e453-439a-ac4b-5032ca39cf07]
+2026-08-19T07:01:21.103+06:30 DEBUG 5892 --- [nio-8080-exec-5] org.hibernate.SQL                        : insert into refresh_tokens (created_at,device_name,expires_at,ip_address,revoked,token_hash,user_id,token_id) values (?,?,?,?,?,?,?,?)
+2026-08-19T07:01:21.103+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP_UTC) <- [2026-08-19T00:31:21.103377Z]
+2026-08-19T07:01:21.103+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [null]
+2026-08-19T07:01:21.103+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (3:TIMESTAMP_UTC) <- [2026-08-26T00:31:21.103377700Z]
+2026-08-19T07:01:21.103+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (4:VARCHAR) <- [127.0.0.1]
+2026-08-19T07:01:21.103+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (5:BOOLEAN) <- [false]
+2026-08-19T07:01:21.103+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (6:VARCHAR) <- [6dfb65ddb35bc18591360b2c4d42dd066fae42b17eb908e5eb62ba51bb6e0964]
+2026-08-19T07:01:21.103+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (7:UUID) <- [9ca5ff98-e14a-406d-b6d2-3623d8e6793d]
+2026-08-19T07:01:21.103+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (8:UUID) <- [2231b08f-88d8-4541-b7bd-aeb9a3deeafb]
+2026-08-19T07:01:21.358+06:30 DEBUG 5892 --- [nio-8080-exec-5] org.hibernate.SQL                        : update users set account_locked_until=?,email=?,failed_login_attempts=?,is_active=?,last_login=?,password_hash=?,registration_status=?,role_id=?,updated_at=? where user_id=?
+2026-08-19T07:01:21.373+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP_UTC) <- [null]
+2026-08-19T07:01:21.373+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [bobo100@gmail.com]
+2026-08-19T07:01:21.373+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [0]
+2026-08-19T07:01:21.373+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (4:BOOLEAN) <- [true]
+2026-08-19T07:01:21.373+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (5:TIMESTAMP_UTC) <- [2026-08-19T00:31:20.724677900Z]
+2026-08-19T07:01:21.373+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (6:VARCHAR) <- [$2a$10$aSaQvVJo6BSGJ0g.cSAq0eM3sou0cQS/ngsNqfovqMjyaOARypH6e]
+2026-08-19T07:01:21.373+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (7:VARCHAR) <- [APPROVED]
+2026-08-19T07:01:21.373+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (8:UUID) <- [bc605a94-e453-439a-ac4b-5032ca39cf07]
+2026-08-19T07:01:21.373+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (9:TIMESTAMP_UTC) <- [2026-08-19T00:31:21.358829Z]
+2026-08-19T07:01:21.373+06:30 TRACE 5892 --- [nio-8080-exec-5] org.hibernate.orm.jdbc.bind              : binding parameter (10:UUID) <- [9ca5ff98-e14a-406d-b6d2-3623d8e6793d]
+2026-08-19T07:01:22.026+06:30 DEBUG 5892 --- [nio-8080-exec-6] org.hibernate.SQL                        : select s1_0.student_id,s1_0.address,s1_0.batch_year,s1_0.created_at,s1_0.major_id,s1_0.phone_no,s1_0.roll_no,s1_0.section_id,s1_0.semester_id,s1_0.student_name,s1_0.term_id,s1_0.updated_at,s1_0.user_id from students s1_0 where s1_0.student_id=?
+2026-08-19T07:01:22.029+06:30 TRACE 5892 --- [nio-8080-exec-6] org.hibernate.orm.jdbc.bind              : binding parameter (1:UUID) <- [10033446-47f7-4df7-8489-a7e6be736c38]
+2026-08-19T07:01:22.292+06:30 DEBUG 5892 --- [nio-8080-exec-6] org.hibernate.SQL                        : select distinct cs1_0.schedule_id,cs1_0.created_at,cs1_0.day_of_week,cs1_0.end_slot_id,es1_0.slot_id,es1_0.display_order,es1_0.end_time,es1_0.period_no,es1_0.start_time,cs1_0.generation_id,g1_0.generation_id,g1_0.created_at,g1_0.finished_at,g1_0.generated_by_staff_id,g1_0.published_at,g1_0.scope_json,g1_0.started_at,g1_0.status,g1_0.term_id,cs1_0.schedule_status,cs1_0.schedule_type,cs1_0.start_slot_id,ss1_0.slot_id,ss1_0.display_order,ss1_0.end_time,ss1_0.period_no,ss1_0.start_time,ta1_0.assignment_id,ta1_0.assigned_at,ta1_0.assigned_by_staff_id,ta1_0.assignment_status,ta1_0.course_id,c1_0.course_id,c1_0.course_code,c1_0.course_name,c1_0.credit_unit,c1_0.display_order,c1_0.is_required,c1_0.major_id,c1_0.semester_id,c1_0.unit_id,ta1_0.section_id,s2_0.section_id,s2_0.section_name,ta1_0.staff_id,s1_0.staff_id,s1_0.address,s1_0.batch_year,s1_0.created_at,s1_0.joined_at,s1_0.left_date,s1_0.phone_no,s1_0.staff_name,s1_0.staff_no,s1_0.unit_id,s1_0.updated_at,s1_0.user_id,ta1_0.term_id,cs1_0.teaching_group_id from class_schedules cs1_0 join generation_sessions g1_0 on g1_0.generation_id=cs1_0.generation_id left join teaching_assignments ta1_0 on ta1_0.assignment_id=cs1_0.teaching_assignment_id left join courses c1_0 on c1_0.course_id=ta1_0.course_id left join staff s1_0 on s1_0.staff_id=ta1_0.staff_id left join sections s2_0 on s2_0.section_id=ta1_0.section_id join time_slots ss1_0 on ss1_0.slot_id=cs1_0.start_slot_id join time_slots es1_0 on es1_0.slot_id=cs1_0.end_slot_id left join teaching_assignment_groups tg1_0 on tg1_0.group_id=cs1_0.teaching_group_id left join teaching_assignment_group_members m1_0 on tg1_0.group_id=m1_0.group_id join teaching_assignments a1_0 on a1_0.assignment_id=m1_0.assignment_id where g1_0.term_id=? and (s2_0.section_id=? or a1_0.section_id=?)
+2026-08-19T07:01:22.292+06:30 TRACE 5892 --- [nio-8080-exec-6] org.hibernate.orm.jdbc.bind              : binding parameter (1:UUID) <- [6eea6860-074e-4e8a-973d-7a538325bef1]
+2026-08-19T07:01:22.292+06:30 TRACE 5892 --- [nio-8080-exec-6] org.hibernate.orm.jdbc.bind              : binding parameter (2:UUID) <- [c183c6d5-9810-40c7-8d93-7636c2c295fe]
+2026-08-19T07:01:22.292+06:30 TRACE 5892 --- [nio-8080-exec-6] org.hibernate.orm.jdbc.bind              : binding parameter (3:UUID) <- [c183c6d5-9810-40c7-8d93-7636c2c295fe]

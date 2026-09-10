@@ -1,0 +1,4 @@
+Error: Could not find or load main class com.unicconnect.UniConnectApplication
+
+Caused by: java.lang.ClassNotFoundException: com.unicconnect.UniConnectApplication
+

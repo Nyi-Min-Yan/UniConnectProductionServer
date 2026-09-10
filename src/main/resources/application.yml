@@ -1,0 +1,80 @@
+﻿server:
+  port: ${PORT:8080}
+
+spring:
+  datasource:
+    # connectTimeout/socketTimeout are seconds for the PostgreSQL driver. The
+    # Neon pooler suspends its compute after a few idle minutes; waking it up
+    # takes 30-45s, so the driver's default 10s connect timeout must be raised
+    # or the first connection of a cold start fails with "Read timed out".
+    url: ${DB_URL:jdbc:postgresql://ep-empty-leaf-azyy2750-pooler.c-3.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&connectTimeout=60&socketTimeout=120}
+    username: ${DB_USERNAME:neondb_owner}
+    password: ${DB_PASSWORD:npg_PMrCxFm5s2If}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      # The Neon pooler can take up to ~45s (sometimes more under load) to wake
+      # from a cold start, so the pool must keep waiting well past that instead
+      # of failing the first request with a 500. DatabaseKeepAlive keeps the
+      # compute warm during normal use, so this only matters at true cold start.
+      connection-timeout: 90000
+      # Never abort application startup because the (serverless) database is
+      # mid-wake-up. Connections are then acquired lazily on first use, and
+      # DatabaseKeepAlive warms the pool right after boot.
+      initialization-fail-timeout: -1
+      # Validate on borrow: if the Neon pooler/compute dropped connections while
+      # idle (Connection reset), the stale socket is discarded and a fresh one is
+      # established instead of being handed to a request that then dies
+      # mid-transaction with "Unable to rollback against JDBC Connection".
+      connection-test-query: SELECT 1
+      validation-timeout: 5000
+      # Evict pooled connections well below the pooler's server-side lifetime so
+      # borrowed sockets are not silently reset during long work (generation).
+      max-lifetime: 900000
+
+  jpa:
+    # Schema is owned by database/migrations/001_initial_schema.sql and the
+    # hosted database may be unreachable for ~30-45s during a cold start.
+    # Skipping schema validation lets the application boot without a live
+    # connection; the dialect is pinned (in spring.jpa.properties, the only
+    # namespace guaranteed to reach Hibernate) so boot does not depend on
+    # querying database metadata. Requests then wait for the
+    # 90s Hikari connection-timeout.
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          # NOTE: do NOT force hibernate.jdbc.time_zone here. time_slots uses
+          # TIME WITHOUT TIME ZONE (wall-clock periods); forcing UTC made
+          # Hibernate read them through a UTC Calendar and shift every
+          # LocalTime by the JVM offset (+06:30 -> 09:00 became 15:30).
+          # Wall-clock TIME columns must pass through unconverted.
+          # time_zone: UTC
+
+  mvc:
+    # Long-lived SSE streams (timetable lobby realtime). 0 = no async timeout;
+    # heartbeats are sent by TimetableRealtimeEventService to keep the streams
+    # alive and detect dead connections.
+    async:
+      request-timeout: 0
+
+jwt:
+  secret: ${JWT_SECRET:your-256-bit-secret-key-change-this-in-production-env-please-must-be-at-least-32-bytes}
+  access-token-expiration-ms: 900000
+  refresh-token-expiration-ms: 604800000
+
+storage:
+  # "local" = disk under base-dir; "supabase" only when URL + key are provided (no SDK needed, REST API).
+  mode: ${STORAGE_MODE:local}
+  base-dir: ${STORAGE_BASE_DIR:./uploads}
+  supabase-url: ${SUPABASE_URL:}
+  supabase-service-role-key: ${SUPABASE_SERVICE_ROLE_KEY:}
+  supabase-bucket: ${SUPABASE_BUCKET:exam-results}
+
+spring.servlet.multipart:
+  max-file-size: 20MB
+  max-request-size: 200MB

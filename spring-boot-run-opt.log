@@ -1,0 +1,86 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.unicconnect:unicconnect-api >-------------------
+[INFO] Building UniConnect API 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.5:run (default-cli) > test-compile @ unicconnect-api >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ unicconnect-api ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ unicconnect-api ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ unicconnect-api ---
+[INFO] skip non existing resourceDirectory D:\UniConnect\UniConnectServer\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ unicconnect-api ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 2 source files with javac [debug release 17] to target\test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] <<< spring-boot:3.2.5:run (default-cli) < test-compile @ unicconnect-api <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.5:run (default-cli) @ unicconnect-api ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-08-17T10:45:27.869+06:30  INFO 24100 --- [           main] com.unicconnect.UniConnectApplication    : Starting UniConnectApplication using Java 21.0.11 with PID 24100 (D:\UniConnect\UniConnectServer\target\classes started by Khaing Zin Phyo in D:\UniConnect\UniConnectServer)
+2026-08-17T10:45:27.869+06:30  INFO 24100 --- [           main] com.unicconnect.UniConnectApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-08-17T10:45:29.291+06:30  INFO 24100 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-17T10:45:29.497+06:30  INFO 24100 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 188 ms. Found 27 JPA repository interfaces.
+2026-08-17T10:45:30.549+06:30  INFO 24100 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-17T10:45:30.577+06:30  INFO 24100 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-17T10:45:30.577+06:30  INFO 24100 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-08-17T10:45:30.687+06:30  INFO 24100 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-17T10:45:30.687+06:30  INFO 24100 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2743 ms
+2026-08-17T10:45:31.005+06:30  INFO 24100 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-17T10:45:31.150+06:30  INFO 24100 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-08-17T10:45:31.223+06:30  INFO 24100 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-17T10:45:31.643+06:30  INFO 24100 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-17T10:45:31.686+06:30  INFO 24100 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-17T10:45:37.012+06:30  INFO 24100 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@26f5e45d
+2026-08-17T10:45:37.012+06:30  INFO 24100 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-17T10:45:41.351+06:30  INFO 24100 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-17T10:45:43.624+06:30  INFO 24100 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-17T10:45:44.273+06:30  INFO 24100 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-17T10:45:46.511+06:30  INFO 24100 --- [           main] com.unicconnect.service.StorageService   : StorageService active mode: local
+2026-08-17T10:45:47.392+06:30  INFO 24100 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7484236d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52b8633c, org.springframework.security.web.context.SecurityContextHolderFilter@70ecb7f6, org.springframework.security.web.header.HeaderWriterFilter@b66d50c, org.springframework.web.filter.CorsFilter@632e3100, org.springframework.security.web.authentication.logout.LogoutFilter@7963767d, com.unicconnect.security.JwtAuthenticationFilter@2f677247, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3acc22ba, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ea7218f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65ea0bcd, org.springframework.security.web.session.SessionManagementFilter@e314809, org.springframework.security.web.access.ExceptionTranslationFilter@5b478eab, org.springframework.security.web.access.intercept.AuthorizationFilter@71faec05]
+2026-08-17T10:45:47.800+06:30  INFO 24100 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-08-17T10:45:47.818+06:30  INFO 24100 --- [           main] com.unicconnect.UniConnectApplication    : Started UniConnectApplication in 20.69 seconds (process running for 21.415)
+2026-08-17T10:45:49.808+06:30  INFO 24100 --- [           main] com.unicconnect.config.DataInitializer   : Roles seeded successfully
+2026-08-17T10:45:53.591+06:30  INFO 24100 --- [           main] com.unicconnect.config.DataInitializer   : Positions seeded successfully
+2026-08-17T10:49:42.053+06:30  INFO 24100 --- [nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-17T10:49:42.057+06:30  INFO 24100 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-17T10:49:42.111+06:30  INFO 24100 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 52 ms
+2026-08-17T10:50:34.197+06:30  INFO 24100 --- [nio-8080-exec-7] c.u.s.TimetableRealtimeEventService      : Realtime stream registered for lobby 526592e0-f778-496a-825a-c123f1fea839 / staff 87a7ceb5-25c8-49c5-8c93-6aa1248f4432
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14:44 min
+[INFO] Finished at: 2026-08-17T11:00:02+06:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.2.5:run (default-cli) on project unicconnect-api: Process terminated with exit code: -1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

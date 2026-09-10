@@ -1,0 +1,214 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.unicconnect:unicconnect-api >-------------------
+[INFO] Building UniConnect API 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.5:run (default-cli) > test-compile @ unicconnect-api >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ unicconnect-api ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ unicconnect-api ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ unicconnect-api ---
+[INFO] skip non existing resourceDirectory D:\UniConnect\UniConnectServer\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ unicconnect-api ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.2.5:run (default-cli) < test-compile @ unicconnect-api <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.5:run (default-cli) @ unicconnect-api ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-08-17T12:36:03.397+06:30  INFO 24544 --- [           main] com.unicconnect.UniConnectApplication    : Starting UniConnectApplication using Java 21.0.11 with PID 24544 (D:\UniConnect\UniConnectServer\target\classes started by Khaing Zin Phyo in D:\UniConnect\UniConnectServer)
+2026-08-17T12:36:03.397+06:30  INFO 24544 --- [           main] com.unicconnect.UniConnectApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-08-17T12:36:04.941+06:30  INFO 24544 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-17T12:36:05.178+06:30  INFO 24544 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 223 ms. Found 27 JPA repository interfaces.
+2026-08-17T12:36:06.550+06:30  INFO 24544 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-17T12:36:06.574+06:30  INFO 24544 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-17T12:36:06.574+06:30  INFO 24544 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-08-17T12:36:06.701+06:30  INFO 24544 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-17T12:36:06.703+06:30  INFO 24544 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3228 ms
+2026-08-17T12:36:07.019+06:30  INFO 24544 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-17T12:36:07.168+06:30  INFO 24544 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-08-17T12:36:07.243+06:30  INFO 24544 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-17T12:36:07.713+06:30  INFO 24544 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-17T12:36:07.770+06:30  INFO 24544 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-17T12:36:12.399+06:30  INFO 24544 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@37986daf
+2026-08-17T12:36:12.399+06:30  INFO 24544 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-17T12:36:16.355+06:30  INFO 24544 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-17T12:36:18.055+06:30  INFO 24544 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-17T12:36:18.829+06:30  INFO 24544 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-17T12:36:21.505+06:30  INFO 24544 --- [           main] com.unicconnect.service.StorageService   : StorageService active mode: local
+2026-08-17T12:36:22.544+06:30  INFO 24544 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@270d54ea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c0ac628, org.springframework.security.web.context.SecurityContextHolderFilter@1b44c342, org.springframework.security.web.header.HeaderWriterFilter@5b99fc65, org.springframework.web.filter.CorsFilter@78363803, org.springframework.security.web.authentication.logout.LogoutFilter@620b0fad, com.unicconnect.security.JwtAuthenticationFilter@43f03c23, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c6c2473, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33d2d3e2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c9d5578, org.springframework.security.web.session.SessionManagementFilter@3770938d, org.springframework.security.web.access.ExceptionTranslationFilter@569fc8ac, org.springframework.security.web.access.intercept.AuthorizationFilter@3e7aa2c9]
+2026-08-17T12:36:22.989+06:30  INFO 24544 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-08-17T12:36:23.005+06:30  INFO 24544 --- [           main] com.unicconnect.UniConnectApplication    : Started UniConnectApplication in 20.462 seconds (process running for 21.325)
+2026-08-17T12:36:25.705+06:30  INFO 24544 --- [           main] com.unicconnect.config.DataInitializer   : Roles seeded successfully
+2026-08-17T12:36:35.372+06:30  INFO 24544 --- [           main] com.unicconnect.config.DataInitializer   : Positions seeded successfully
+2026-08-17T12:37:10.830+06:30  INFO 24544 --- [nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-17T12:37:10.832+06:30  INFO 24544 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-17T12:37:10.929+06:30  INFO 24544 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 93 ms
+PREFIX d=0 unit=0 opts=25 first=Monday P1-P2
+ROOTINFO d=0 unit=0 code=CST-1102 sessionsPerWeek=2 periodsPerSession=2 usedDays=[] staffIds=[87a7ceb5-25c8-49c5-8c93-6aa1248f4432] sectionIds=[c183c6d5-9810-40c7-8d93-7636c2c295fe]
+SLOTINFO slots.size=6 lunchEnd=12:00 lunchStart=13:00
+  SLOT i=0 order=1 period=1 15:30-16:30
+  SLOT i=1 order=2 period=2 16:30-17:30
+  SLOT i=2 order=3 period=3 17:30-18:30
+  SLOT i=3 order=4 period=4 19:30-20:30
+  SLOT i=4 order=5 period=5 20:30-21:30
+  SLOT i=5 order=6 period=6 21:30-22:30
+  WINDOW startIdx=0 P1-P2 consecutive=true
+  WINDOW startIdx=1 P2-P3 consecutive=true
+  WINDOW startIdx=2 P3-P4 consecutive=true
+  WINDOW startIdx=3 P4-P5 consecutive=true
+  WINDOW startIdx=4 P5-P6 consecutive=true
+  OPT Monday P1-P2
+  OPT Monday P5-P6
+  OPT Tuesday P1-P2
+  OPT Tuesday P5-P6
+  OPT Wednesday P1-P2
+  OPT Wednesday P5-P6
+  OPT Thursday P1-P2
+  OPT Thursday P5-P6
+  OPT Friday P1-P2
+  OPT Friday P5-P6
+  OPT Monday P2-P3
+  OPT Monday P3-P4
+  OPT Monday P4-P5
+  OPT Tuesday P2-P3
+  OPT Tuesday P3-P4
+  OPT Tuesday P4-P5
+  OPT Wednesday P2-P3
+  OPT Wednesday P3-P4
+  OPT Wednesday P4-P5
+  OPT Thursday P2-P3
+  OPT Thursday P3-P4
+  OPT Thursday P4-P5
+  OPT Friday P2-P3
+  OPT Friday P3-P4
+  OPT Friday P4-P5
+PREFIX d=1 unit=0 opts=20 first=Tuesday P1-P2
+ROOTINFO d=1 unit=0 code=CST-1102 sessionsPerWeek=2 periodsPerSession=2 usedDays=[1] staffIds=[87a7ceb5-25c8-49c5-8c93-6aa1248f4432] sectionIds=[c183c6d5-9810-40c7-8d93-7636c2c295fe]
+SLOTINFO slots.size=6 lunchEnd=12:00 lunchStart=13:00
+  SLOT i=0 order=1 period=1 15:30-16:30
+  SLOT i=1 order=2 period=2 16:30-17:30
+  SLOT i=2 order=3 period=3 17:30-18:30
+  SLOT i=3 order=4 period=4 19:30-20:30
+  SLOT i=4 order=5 period=5 20:30-21:30
+  SLOT i=5 order=6 period=6 21:30-22:30
+  WINDOW startIdx=0 P1-P2 consecutive=true
+  WINDOW startIdx=1 P2-P3 consecutive=true
+  WINDOW startIdx=2 P3-P4 consecutive=true
+  WINDOW startIdx=3 P4-P5 consecutive=true
+  WINDOW startIdx=4 P5-P6 consecutive=true
+  OPT Tuesday P1-P2
+  OPT Tuesday P5-P6
+  OPT Wednesday P1-P2
+  OPT Wednesday P5-P6
+  OPT Thursday P1-P2
+  OPT Thursday P5-P6
+  OPT Friday P1-P2
+  OPT Friday P5-P6
+  OPT Tuesday P2-P3
+  OPT Tuesday P3-P4
+  OPT Tuesday P4-P5
+  OPT Wednesday P2-P3
+  OPT Wednesday P3-P4
+  OPT Wednesday P4-P5
+  OPT Thursday P2-P3
+  OPT Thursday P3-P4
+  OPT Thursday P4-P5
+  OPT Friday P2-P3
+  OPT Friday P3-P4
+  OPT Friday P4-P5
+PREFIX d=2 unit=1 opts=21 first=Monday P3-P4
+ROOTINFO d=2 unit=1 code=CST-1123 sessionsPerWeek=2 periodsPerSession=2 usedDays=[] staffIds=[de650087-3a53-4755-9432-a2ef2a1d8ef7] sectionIds=[c183c6d5-9810-40c7-8d93-7636c2c295fe]
+SLOTINFO slots.size=6 lunchEnd=12:00 lunchStart=13:00
+  SLOT i=0 order=1 period=1 15:30-16:30
+  SLOT i=1 order=2 period=2 16:30-17:30
+  SLOT i=2 order=3 period=3 17:30-18:30
+  SLOT i=3 order=4 period=4 19:30-20:30
+  SLOT i=4 order=5 period=5 20:30-21:30
+  SLOT i=5 order=6 period=6 21:30-22:30
+  WINDOW startIdx=0 P1-P2 consecutive=true
+  WINDOW startIdx=1 P2-P3 consecutive=true
+  WINDOW startIdx=2 P3-P4 consecutive=true
+  WINDOW startIdx=3 P4-P5 consecutive=true
+  WINDOW startIdx=4 P5-P6 consecutive=true
+  OPT Monday P3-P4
+  OPT Monday P5-P6
+  OPT Tuesday P3-P4
+  OPT Tuesday P5-P6
+  OPT Wednesday P1-P2
+  OPT Wednesday P5-P6
+  OPT Thursday P1-P2
+  OPT Thursday P5-P6
+  OPT Friday P1-P2
+  OPT Friday P5-P6
+  OPT Monday P4-P5
+  OPT Tuesday P4-P5
+  OPT Wednesday P2-P3
+  OPT Wednesday P3-P4
+  OPT Wednesday P4-P5
+  OPT Thursday P2-P3
+  OPT Thursday P3-P4
+  OPT Thursday P4-P5
+  OPT Friday P2-P3
+  OPT Friday P3-P4
+  OPT Friday P4-P5
+PREFIX d=3 unit=1 opts=18 first=Tuesday P3-P4
+PREFIX d=4 unit=2 opts=17 first=Monday P5-P6
+PREFIX d=5 unit=2 opts=16 first=Tuesday P5-P6
+PREFIX d=6 unit=3 opts=15 first=Wednesday P1-P2
+PREFIX d=7 unit=3 opts=10 first=Thursday P1-P2
+PREFIX d=8 unit=4 opts=11 first=Wednesday P3-P4
+PREFIX d=9 unit=4 opts=8 first=Thursday P3-P4
+PREFIX d=10 unit=5 opts=7 first=Wednesday P5-P6
+PREFIX d=11 unit=5 opts=6 first=Thursday P5-P6
+PREFIX d=12 unit=6 opts=5 first=Friday P1-P2
+PREFIX d=12 unit=6 opts=4 first=Thursday P5-P6
+PREFIX d=13 unit=6 opts=3 first=Friday P3-P4
+PROFILE final-sem-a0b04279-56ec-4f3f-876d-dde5ecba7fe4 states=15 backtracks=6 maxDepth=13 select=15 generate=845 evaluate=186 forward=20 canPlace=22335 place=206 remove=192 tSelect=1ms tGenerate=17ms tEvaluate=24ms tForward=2ms elapsed=104ms
+DEPTH depth states optsPerState fwdFail unitSel
+DEPTH 0 states=1 avgOpts=25 fwdFail=0 units=[0:1,]
+DEPTH 1 states=1 avgOpts=20 fwdFail=0 units=[0:1,]
+DEPTH 2 states=1 avgOpts=21 fwdFail=0 units=[1:1,]
+DEPTH 3 states=1 avgOpts=18 fwdFail=0 units=[1:1,]
+DEPTH 4 states=1 avgOpts=17 fwdFail=0 units=[2:1,]
+DEPTH 5 states=1 avgOpts=16 fwdFail=0 units=[2:1,]
+DEPTH 6 states=1 avgOpts=15 fwdFail=0 units=[3:1,]
+DEPTH 7 states=1 avgOpts=10 fwdFail=0 units=[3:1,]
+DEPTH 8 states=1 avgOpts=11 fwdFail=0 units=[4:1,]
+DEPTH 9 states=1 avgOpts=8 fwdFail=0 units=[4:1,]
+DEPTH 10 states=1 avgOpts=7 fwdFail=0 units=[5:1,]
+DEPTH 11 states=1 avgOpts=6 fwdFail=0 units=[5:1,]
+DEPTH 12 states=2 avgOpts=4 fwdFail=5 units=[6:2,]
+DEPTH 13 states=1 avgOpts=3 fwdFail=0 units=[6:1,]
+2026-08-17T12:38:02.585+06:30  INFO 24544 --- [nio-8080-exec-3] c.u.service.TimetableGenerationService   : Timetable generated: 16 schedules for generation 3bc942ef-1ab9-4daa-b60b-cc3f941572b8 (examType=null)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13:26 min
+[INFO] Finished at: 2026-08-17T12:49:19+06:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.2.5:run (default-cli) on project unicconnect-api: Process terminated with exit code: -1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
