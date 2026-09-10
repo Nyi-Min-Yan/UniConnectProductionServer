@@ -1,0 +1,70 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.unicconnect:unicconnect-api >-------------------
+[INFO] Building UniConnect API 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.5:run (default-cli) > test-compile @ unicconnect-api >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ unicconnect-api ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ unicconnect-api ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ unicconnect-api ---
+[INFO] skip non existing resourceDirectory /home/kazue/Projects/School/UniConnectProduction/UniConnectProductionServer/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ unicconnect-api ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.2.5:run (default-cli) < test-compile @ unicconnect-api <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.5:run (default-cli) @ unicconnect-api ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-09-10T19:33:33.769+06:30  INFO 6584 --- [           main] com.unicconnect.UniConnectApplication    : Starting UniConnectApplication using Java 21.0.12 with PID 6584 (/home/kazue/Projects/School/UniConnectProduction/UniConnectProductionServer/target/classes started by kazue in /home/kazue/Projects/School/UniConnectProduction/UniConnectProductionServer)
+2026-09-10T19:33:33.770+06:30  INFO 6584 --- [           main] com.unicconnect.UniConnectApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-09-10T19:33:34.323+06:30  INFO 6584 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-10T19:33:34.407+06:30  INFO 6584 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 27 JPA repository interfaces.
+2026-09-10T19:33:34.842+06:30  INFO 6584 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-10T19:33:34.850+06:30  INFO 6584 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-10T19:33:34.851+06:30  INFO 6584 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-09-10T19:33:34.883+06:30  INFO 6584 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-10T19:33:34.884+06:30  INFO 6584 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1091 ms
+2026-09-10T19:33:34.998+06:30  INFO 6584 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-10T19:33:35.033+06:30  INFO 6584 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-09-10T19:33:35.053+06:30  INFO 6584 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-10T19:33:35.186+06:30  INFO 6584 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-10T19:33:35.202+06:30  INFO 6584 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-10T19:33:35.212+06:30  INFO 6584 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-10T19:33:36.690+06:30  WARN 6584 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-10T19:33:37.574+06:30  INFO 6584 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-10T19:33:37.576+06:30  INFO 6584 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10T19:33:37.773+06:30  INFO 6584 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-10T19:33:38.775+06:30  INFO 6584 --- [           main] com.unicconnect.service.StorageService   : StorageService active mode: local
+2026-09-10T19:33:39.168+06:30  INFO 6584 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@960a64a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@789b3a77, org.springframework.security.web.context.SecurityContextHolderFilter@35069061, org.springframework.security.web.header.HeaderWriterFilter@61ba034a, org.springframework.web.filter.CorsFilter@3706ba88, org.springframework.security.web.authentication.logout.LogoutFilter@ffd66e1, com.unicconnect.security.JwtAuthenticationFilter@1e5eb20a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fc1a561, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@501dd0b4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51cea39e, org.springframework.security.web.session.SessionManagementFilter@401835ac, org.springframework.security.web.access.ExceptionTranslationFilter@4a42bb32, org.springframework.security.web.access.intercept.AuthorizationFilter@40b63796]
+2026-09-10T19:33:39.338+06:30  INFO 6584 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-09-10T19:33:39.346+06:30  INFO 6584 --- [           main] com.unicconnect.UniConnectApplication    : Started UniConnectApplication in 5.847 seconds (process running for 6.07)
+2026-09-10T19:33:39.652+06:30  INFO 6584 --- [           main] com.unicconnect.config.DataInitializer   : Roles seeded successfully
+2026-09-10T19:33:39.864+06:30  INFO 6584 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-10T19:33:39.864+06:30  INFO 6584 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-10T19:33:39.865+06:30  INFO 6584 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-10T19:33:40.156+06:30  INFO 6584 --- [           main] com.unicconnect.config.DataInitializer   : Positions seeded successfully
+2026-09-10T20:11:31.312+06:30  INFO 6584 --- [nio-8080-exec-8] c.u.s.TimetableRealtimeEventService      : Realtime generation stream registered for generation 6c1ca3d3-c5f0-48df-9056-7ec58d075bdc / staff 372bca01-3d89-4cb6-ab51-3e31e9558d18
+2026-09-10T20:11:31.650+06:30  INFO 6584 --- [nio-8080-exec-9] c.u.s.TimetableRealtimeEventService      : Realtime stream registered for lobby 38847c16-1a17-485f-bb1c-ce754ade3c59 / staff 372bca01-3d89-4cb6-ab51-3e31e9558d18
+2026-09-10T20:13:14.378+06:30  INFO 6584 --- [nio-8080-exec-3] c.u.s.TimetableRealtimeEventService      : Realtime stream removed for lobby 38847c16-1a17-485f-bb1c-ce754ade3c59 / staff 372bca01-3d89-4cb6-ab51-3e31e9558d18
+2026-09-10T20:20:38.302+06:30  INFO 6584 --- [nio-8080-exec-9] c.u.s.TimetableRealtimeEventService      : Realtime generation stream registered for generation 6c1ca3d3-c5f0-48df-9056-7ec58d075bdc / staff 372bca01-3d89-4cb6-ab51-3e31e9558d18
+2026-09-10T20:20:38.485+06:30  INFO 6584 --- [nio-8080-exec-8] c.u.s.TimetableRealtimeEventService      : Realtime stream registered for lobby 38847c16-1a17-485f-bb1c-ce754ade3c59 / staff 372bca01-3d89-4cb6-ab51-3e31e9558d18
+2026-09-10T20:21:59.384+06:30  INFO 6584 --- [nio-8080-exec-1] c.u.s.TimetableRealtimeEventService      : Realtime stream removed for lobby 38847c16-1a17-485f-bb1c-ce754ade3c59 / staff 372bca01-3d89-4cb6-ab51-3e31e9558d18
